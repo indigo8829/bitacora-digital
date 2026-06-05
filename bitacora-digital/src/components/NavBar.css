@@ -1,0 +1,25 @@
+.navegacion-principal {
+    width: 80% auto;
+    display: flex; 
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 20px;
+    background-color: #d89727;
+    border-radius: 5px;
+    border: 1px solid #fff188;
+}
+
+.navegacion-principal a {
+    background-color: #aa7834e9;
+    color: #ffff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.navegacion-principal a:hover {
+    background-color: #7e540b;
+}
