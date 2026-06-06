@@ -4,10 +4,13 @@ INFORMACIÓN DE CADA CATEGORIA PARA EL COMPONENTE -> LISTADO DE CATEGORIAS (GALE
 import "./CategoryCard.css";
 
 
-function CategoryCard ({categoria}) {
-    return (
+function CategoryCard ({categoria, clickCategoryCallBack}) {
+    return(
+        //Avisame cuando hagan click en una categoria e indicame cual. (enviaselo al padre )
         <>
-            <div className="category-card">
+            <div className="category-card"
+            onClick={() => {clickCategoryCallBack(categoria.id)}}
+            >
                 <div>
                     <img src={categoria.imagen} alt={categoria.nombre} />
                 </div>

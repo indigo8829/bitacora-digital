@@ -5,18 +5,20 @@ posteriormente los pasaremos a la MockAPI
 
 const postData = [
     {
-        id: 1, 
+        id: 2, 
         titulo: "Lo que me enseó emprender en el medio rural",
-        categoriaId: 1,
+        categoria:"Experiencias y Aprendizajes",
+        categoriaId: 2,
         fecha: "2026-06-05",
         imagen: "",
         resumen: "Ad vitae odio purus, convallis himenaeos sagittis mi, bibendum iaculis.",
         detalle: "Lorem ipsum dolor sit amet consectetur adipiscing, elit fusce penatibus aptent lobortis faucibus, et fringilla tempus vehicula sem. Sodales ultrices mollis cras sociis pellentesque malesuada, ullamcorper tincidunt magnis mus habitant, aliquam congue vehicula quis cum. Id laoreet cubilia purus aliquam litora auctor augue pretium, rhoncus erat hendrerit proin donec cursus posuere, vulputate consequat facilisi interdum urna varius non."
     },
     {
-        id: 2, 
+        id: 3, 
         titulo: "Aprendiendo React desde cero",
-        categoriaId: 2,
+        categoria: "Tecnología y Digitalización",
+        categoriaId: 3,
         fecha: "2026-06-05",
         imagen: "",
         resumen: "Ad vitae odio purus, convallis himenaeos sagittis mi, bibendum iaculis.",
@@ -24,18 +26,20 @@ const postData = [
         
     },
     {
-        id: 3, 
+        id: 4, 
         titulo: "Hablamos de territorio",
-        categoriaId: 3,
+        categoria: "Innovación Social y Territorio",
+        categoriaId: 4,
         fecha: "2026-06-05",
         imagen: "",
         resumen: "Ad vitae odio purus, convallis himenaeos sagittis mi, bibendum iaculis.",
         detalle: "Lorem ipsum dolor sit amet consectetur adipiscing, elit fusce penatibus aptent lobortis faucibus, et fringilla tempus vehicula sem. Sodales ultrices mollis cras sociis pellentesque malesuada, ullamcorper tincidunt magnis mus habitant, aliquam congue vehicula quis cum. Id laoreet cubilia purus aliquam litora auctor augue pretium, rhoncus erat hendrerit proin donec cursus posuere, vulputate consequat facilisi interdum urna varius non."
     },
     {
-        id: 4, 
+        id: 5, 
         titulo: "Duelo, Resiliencia y Reconstrucción",
-        categoriaId: 4,
+        categoria:  "Salud, Límites y Adaptación",
+        categoriaId: 5,
         fecha: "2026-06-05",
         imagen: "",
         resumen: "Ad vitae odio purus, convallis himenaeos sagittis mi, bibendum iaculis.",
