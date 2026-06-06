@@ -1,0 +1,22 @@
+  /* Resetear (dimension total real)*/
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Colores generales */
+:root {
+    --rosa: #F294A5;
+    --rosa-sec: #D996A2;
+    --verde: #9DBF8E;
+    --verde-claro: #AFBFA3;
+    --verde-sombras: #26321d;
+    --verde-oscuro: #292D26;
+    --beige: #F2EADF;
+    --marron: #735449;
+}
+
+/*Fuentes generales*/
+@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Inconsolata:wght@200..900&display=swap');
+
