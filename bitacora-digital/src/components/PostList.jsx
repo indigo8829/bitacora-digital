@@ -1,11 +1,22 @@
-// no me vale asi hay que modificar
+/*-------LISTADO DE PUBLICACIONES--------*/
+
+import PostListItem from "./PostListItem";
+import postData from "../data/postData";
+import "./PostList.css";
 
 function PostList ( {post}) {
     return (
         <>
-            <div>
+            <div className="post-list">
                 <h2>Publicaciones</h2>
-                <h3>{post.titulo}</h3>
+                {postData.map((ObjetoPost, i) => {
+                return (
+                    <PostListItem
+                        key={i} 
+                        post={ObjetoPost}
+                    />
+                )
+            })}
             </div>
         </>
     )

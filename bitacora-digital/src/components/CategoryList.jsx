@@ -1,3 +1,5 @@
+/*-------LISTADO DE CATEGORIAS (COMO GALERIA)--------*/
+
 import CategoryCard from "../components/CategoryCard";
 import categoriesData from "../data/categoriesData";
 import "./CategoryList.css";

@@ -1,6 +1,8 @@
+/*-------PUBLICACIÓN RESUMIDA--------*/
+
 import "./PostCard.css";
 
-function PostCard ({post, clickLeerMasCallBack}) {
+function PostCard ({post}) {
           
     
     return (

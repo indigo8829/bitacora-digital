@@ -6,21 +6,26 @@ posteriormente los pasaremos a la MockAPI
 const categoriesData = [
     {
         id: 1, 
-        nombre: "Experiencias y Aprendizajes",
+        nombre: "Todas las publicaciones",
         imagen: "https://picsum.photos/200"
     },
     {
         id: 2, 
-        nombre: "Tecnología y Digitalización",
+        nombre: "Experiencias y Aprendizajes",
         imagen: "https://picsum.photos/200"
     },
     {
         id: 3, 
-        nombre: "Innovación Social y Territorio",
+        nombre: "Tecnología y Digitalización",
         imagen: "https://picsum.photos/200"
     },
     {
         id: 4, 
+        nombre: "Innovación Social y Territorio",
+        imagen: "https://picsum.photos/200"
+    },
+    {
+        id: 5, 
         nombre: "Salud, Límites y Adaptación",
         imagen: "https://picsum.photos/200"
     }

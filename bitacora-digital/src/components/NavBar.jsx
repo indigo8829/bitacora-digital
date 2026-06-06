@@ -1,3 +1,5 @@
+/*-------BARRA DE NAVEGACIÓN PRINCIPAL--------*/
+
 import { Link } from "react-router-dom";
 import "./NavBar.css";
 

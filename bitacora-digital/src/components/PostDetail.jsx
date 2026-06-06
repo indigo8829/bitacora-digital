@@ -1,3 +1,5 @@
+/*-------PUBLICACIÓN DETALLADA O COMPLETA--------*/
+
 import "./PostDetail.css";
 
 function PostDetail ({post}) {

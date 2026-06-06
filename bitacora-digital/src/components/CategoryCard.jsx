@@ -1,3 +1,6 @@
+/*------- SUBCOMPONENTE:
+INFORMACIÓN DE CADA CATEGORIA PARA EL COMPONENTE -> LISTADO DE CATEGORIAS (GALERIA)--------*/
+
 import "./CategoryCard.css";
 
 
