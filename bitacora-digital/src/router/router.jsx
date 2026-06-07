@@ -4,6 +4,7 @@ import Home from "../pages/Home.jsx";
 import MiHistoria from "../pages/MiHistoria.jsx";
 import Bitacora from "../pages/Bitacora.jsx";
 import Hablemos from "../pages/Hablemos.jsx";
+import PostDetail from "../components/PostDetail.jsx";
 
 const router = createBrowserRouter ([
     {
@@ -20,7 +21,13 @@ const router = createBrowserRouter ([
             },
             {
                 path:'bitacora',
-                element:<Bitacora/>
+                element:<Bitacora/>,
+                children: [
+                    {
+                        path: ':idPost',
+                        element:<PostDetail/>
+                    }
+                ]
             },
             {
                 path:'hablemos',

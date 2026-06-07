@@ -1,25 +1,34 @@
 /*-------PUBLICACIÓN DETALLADA O COMPLETA--------*/
+import { useParams } from "react-router-dom"
+import postData from "../data/postData";
+import "./PostDetail.css";
 
-//import "./PostDetail.css";
+//obtengo la id de la URL con useParams
+//filtro el post correpondiente con find y lo guardo 
+//muestro los datos del post guardado
 
-function PostDetail ({post}) {
-          
-    
+
+function PostDetail () {
+    const {idPost} = useParams();
+    const idPostNum = parseInt(idPost);
+    //console.log(postData);
+    const postSelecc = postData.find((post) => post.id === idPostNum);
+    //console.log(postSelecc);         
     return (
         <>
-            <div className="post-card">
+            <div className="post-detail">
                 <div>
-                    <h1>{post.titulo}</h1>
+                    <h1>{postSelecc.titulo}</h1>
                     <p>CONTENIDO COMPLETO DE LA PUBLICACION</p>
-                    <h3>{post.categoria}</h3>
-                    <h4>{post.fecha}</h4>
+                    <h3>{postSelecc.categoria}</h3>
+                    <h4>{postSelecc.fecha}</h4>
                 </div>
                 <div>
-                    <img src={post.imagen} alt="" />
+                    <img src={postSelecc.imagen} alt="" />
                 </div>
                 <div>
-                    <h2>{post.titulo}</h2>
-                    <p>{post.detalle}</p>                   
+                    <h2>{postSelecc.titulo}</h2>
+                    <p>{postSelecc.detalle}</p>                   
                 </div>
             </div>
         </>
