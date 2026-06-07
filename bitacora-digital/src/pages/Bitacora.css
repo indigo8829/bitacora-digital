@@ -1,0 +1,30 @@
+
+.bitacora-principal {
+    width: 80%;
+    margin: auto;
+}
+
+
+/* LISTA PUBLICACIONES + PUBLICACION DETALLE*/
+.bitacora-detalle {
+    display: flex;
+    flex-direction: row;
+    gap:5px;
+    width: 80%;
+    margin: auto;
+}
+
+
+.bitacora-menus {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+/*PUBLICACIONES RESUMEN*/
+.bitacora-post {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px; 
+}

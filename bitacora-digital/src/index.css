@@ -1,8 +1,14 @@
+  /*-----------------REGLAS DE ESTILOS GLOBALES DEL PROYECTO -----------*/
+  
   /* Resetear (dimension total real)*/
 * {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* Colores generales */
@@ -20,3 +26,35 @@
 /*Fuentes generales*/
 @import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Inconsolata:wght@200..900&display=swap');
 
+h1 {
+    font-family: "Inconsolata", monospace;
+    font-optical-sizing: auto;
+    font-size: xx-large;
+    font-weight: bolder;
+    font-style: normal;
+    font-variation-settings:"wdth" 100;
+    text-transform: uppercase;
+    color: var(--rosa);
+    text-shadow: 1px 1px 3px var(--rosa-sec);
+    text-align: center;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: var(--verde);
+    text-shadow: 1px 1px 3px var(--verde-claro);
+    text-align: center;
+    font-size: x-large;
+}
+
+p {
+   margin-bottom: 10px;
+   font-size: medium;
+   color: var(--verde-sombras);
+   text-align: left; 
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

@@ -9,7 +9,7 @@ function CategoryList ({clickCategoryCallBack}) {
     return (
         //Capturamos la llamada del hijo y se la pasamos al padre por props.
         <>
-            <div className="category-list">
+            <nav className="category-list">
                 {categoriesData.map((ObjetoCategoria, i) => {
                     return (
                         <CategoryCard 
@@ -18,7 +18,7 @@ function CategoryList ({clickCategoryCallBack}) {
                             clickCategoryCallBack={clickCategoryCallBack}/>
                     )
                 })}  
-            </div>
+            </nav>
              
         </>
     )

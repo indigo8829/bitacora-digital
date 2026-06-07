@@ -1,15 +1,13 @@
 /*-------PUBLICACIÓN RESUMIDA--------*/
 import { Link } from "react-router-dom";
-
 import "./PostCard.css";
 
-function PostCard ({post}) {
-          
+function PostCard ({post}) {       
     
     return (
         <>
-            <Link to={`/bitacora/${post.id}`}>
-                <div className="post-card">
+            <article className="post-card">
+                <Link to={`/bitacora/${post.id}`}>
                     <div>
                         <img src={post.imagen} alt="" />
                     </div>
@@ -19,8 +17,8 @@ function PostCard ({post}) {
                         <h4>{post.fecha}</h4>
                         <p>{post.resumen}</p>
                     </div>
-                </div>       
-            </Link>
+                </Link>
+            </article>
         </>
     )
 }

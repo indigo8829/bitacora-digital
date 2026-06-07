@@ -1,12 +1,12 @@
 .post-card {
     display: flex;
     flex-direction: column;
-    gap:10px;
     margin: 30px;
     padding: 20px;
     border: 1px solid #000000 ;
     border-radius: 8px;
-    background-color: #f5e7dd;
+    background-color: #f5e7dd; 
+    max-width: 300px;
 }
 
 .post-card div:first-child {
@@ -18,7 +18,6 @@
 
 }
 
-.post-card > button {
-    width: fit-content;
-    background-color: var(--rosa-sec);
-}    
+.post-card img {
+    height: 250px;
+}

@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom"
 import postData from "../data/postData";
 import "./PostDetail.css";
 
-//obtengo la id de la URL con useParams
+//obtengo los parametros dinamicos (id) de la URL con useParams
 //filtro el post correpondiente con find y lo guardo 
 //muestro los datos del post guardado
 
@@ -16,7 +16,7 @@ function PostDetail () {
     //console.log(postSelecc);         
     return (
         <>
-            <div className="post-detail">
+            <article className="post-detail">
                 <div>
                     <h1>{postSelecc.titulo}</h1>
                     <p>CONTENIDO COMPLETO DE LA PUBLICACION</p>
@@ -30,7 +30,7 @@ function PostDetail () {
                     <h2>{postSelecc.titulo}</h2>
                     <p>{postSelecc.detalle}</p>                   
                 </div>
-            </div>
+            </article>
         </>
     )
 }
