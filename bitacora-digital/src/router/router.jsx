@@ -1,10 +1,11 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App.jsx";
-import Home from "../pages/Home.jsx";
+import Index from "../pages/Index.jsx";
 import MiHistoria from "../pages/MiHistoria.jsx";
 import Bitacora from "../pages/Bitacora.jsx";
 import Hablemos from "../pages/Hablemos.jsx";
 import PostDetail from "../components/PostDetail.jsx";
+import Proyectos from "../pages/Proyectos.jsx";
 
 const router = createBrowserRouter ([
     {
@@ -13,11 +14,15 @@ const router = createBrowserRouter ([
         children:[
             {
                 path:'',
-                element:<Home/>
+                element:<Index/>
             },
             {
                 path:'mihistoria',
                 element:<MiHistoria/>
+            },
+            {
+                path:'proyectos',
+                element:<Proyectos/>
             },
             {
                 path:'bitacora',

@@ -1,0 +1,12 @@
+.custom-button {
+    display:block;
+    text-decoration: none;
+    text-align: center;
+    border:none;
+    border-radius: 5px;
+    background-color: red;
+    color:#ffff;
+    padding: 6px 12px;
+    width: fit-content;
+    margin: 0 auto;
+}

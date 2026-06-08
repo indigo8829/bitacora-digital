@@ -1,0 +1,8 @@
+.personal-presentation {
+    max-width: 300px;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    background-color: rgb(203, 249, 249);
+}

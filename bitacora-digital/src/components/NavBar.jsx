@@ -7,10 +7,11 @@ function NavBar () {
     return (
         <>
             <nav className="navegacion-principal">
-                <Link to='/'>Home</Link>
-                <Link to='/mihistoria'>Mi Historia</Link>
-                <Link to='/bitacora'>Bitácora</Link>
-                <Link to='/hablemos'>Hablemos</Link>
+                <navLink to='/'>Inicio</navLink>
+                <navLink to='/mihistoria'>Mi Historia</navLink>
+                <navLink to='/proyectos'>Proyectos</navLink>
+                <navLink to='/bitacora'>Bitácora</navLink>
+                <navLink to='/hablemos'>Hablemos</navLink>
             </nav>
         </>
     ) 
