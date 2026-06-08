@@ -1,8 +1,8 @@
-import PostCard from "../components/PostCard";
-import postData from "../data/postData";
-import CategoryList from "../components/CategoryList";
-import PostList from "../components/PostList";
-import PostDetail from "../components/PostDetail";
+import PostCard from "./components/PostCard";
+import postData from "../../data/postData";
+import CategoryList from "./components/CategoryList";
+import PostList from "./components/PostList";
+import PostDetail from "./components/PostDetail";
 
 import { useState } from "react";
 import { Outlet, useParams } from "react-router-dom";

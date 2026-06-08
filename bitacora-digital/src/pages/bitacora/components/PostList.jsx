@@ -1,7 +1,7 @@
 /*-------LISTADO DE PUBLICACIONES--------*/
 
 import PostListItem from "./PostListItem";
-import postData from "../data/postData";
+import postData from "../../../data/postData";
 import "./PostList.css";
 
 function PostList ( {post}) {

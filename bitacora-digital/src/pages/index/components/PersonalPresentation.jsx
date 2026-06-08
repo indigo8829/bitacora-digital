@@ -1,4 +1,4 @@
-import CustomButton from "./CustomButton.jsx";
+import CustomButton from "../../../components/CustomButton.jsx";
 import "./PersonalPresentation.css";
 
 function PersonalPresentation () {

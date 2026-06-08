@@ -1,9 +1,9 @@
-import AboutBitacora from "../components/AboutBitacora";
-import ContactCta from "../components/ContactCta";
-import FeacturedSection from "../components/FeaturedProjects";
-import IndexHero from "../components/IndexHero";
-import PersonalPresentation from "../components/PersonalPresentation";
-import TopicsSection from "../components/TopicsSection";
+import AboutBitacora from "./components/AboutBitacora";
+import ContactCta from "./components/ContactCta";
+import FeacturedSection from "./components/FeaturedProjects";
+import IndexHero from "./components/IndexHero";
+import PersonalPresentation from "./components/PersonalPresentation";
+import TopicsSection from "./components/TopicsSection";
 
 import "./Index.css";
 

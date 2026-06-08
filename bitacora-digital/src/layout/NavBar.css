@@ -10,7 +10,7 @@
     border: 1px solid #fff188;
 }
 
-.navegacion-principal navLink {
+.navegacion-principal a {
     background-color: #aa7834e9;
     color: #ffff;
     padding: 10px 15px;
@@ -19,6 +19,6 @@
     text-decoration: none;
 }
 
-.navegacion-principal navLink:hover {
+.navegacion-principal a:hover {
     background-color: #7e540b;
 }

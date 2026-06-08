@@ -1,6 +1,6 @@
 /*-------PUBLICACIÓN DETALLADA O COMPLETA--------*/
 import { useParams } from "react-router-dom"
-import postData from "../data/postData";
+import postData from "../../../data/postData";
 import "./PostDetail.css";
 
 //obtengo los parametros dinamicos (id) de la URL con useParams

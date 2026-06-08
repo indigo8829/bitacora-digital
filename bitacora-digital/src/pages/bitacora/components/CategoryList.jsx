@@ -1,7 +1,7 @@
 /*-------LISTADO DE CATEGORIAS (COMO GALERIA)--------*/
 
-import CategoryCard from "../components/CategoryCard";
-import categoriesData from "../data/categoriesData";
+import CategoryCard from "./CategoryCard";
+import categoriesData from "../../../data/categoriesData";
 import "./CategoryList.css";
 
 function CategoryList ({clickCategoryCallBack}) {
