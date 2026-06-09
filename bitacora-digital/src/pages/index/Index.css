@@ -1,3 +1,8 @@
 .index {
     
 }
+
+.index-a {
+    display: flex;
+    flex-direction: row-reverse;
+}

@@ -1,0 +1,7 @@
+.project-card{
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    border: 1px solid black
+}

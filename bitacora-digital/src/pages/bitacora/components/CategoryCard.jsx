@@ -22,4 +22,4 @@ function CategoryCard ({categoria, clickCategoryCallBack}) {
     )
 }
 
-export default CategoryCard;
+export default CategoryCard

@@ -12,12 +12,14 @@ function Index () {
          //Contenido principal de página.
         <>
             <main className="index">
-                <h1>Inicio</h1>
-                <section>
-                    <IndexHero/>
-                </section>
-                <section>
-                    <AboutBitacora/>
+                <section className="index-a">
+                    <div>
+                        <IndexHero/>
+                        <AboutBitacora/>
+                    </div>
+                    <aside>
+                        <PersonalPresentation/>
+                    </aside>
                 </section>
                 <section>
                     <TopicsSection/>
@@ -25,9 +27,7 @@ function Index () {
                 <section>
                     <FeacturedSection/>
                 </section>
-                <aside>
-                    <PersonalPresentation/>
-                </aside>
+               
                 <section>
                     <ContactCta/>
                 </section>
