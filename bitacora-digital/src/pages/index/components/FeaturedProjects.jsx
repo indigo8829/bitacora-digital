@@ -1,4 +1,4 @@
-import ProjectCard from "./ProjectCard"
+import ProjectCard from "../../proyectos/components/ProjectCard"
 import projectsData from "../../../data/projectsData"
 import CustomButton from "../../../components/CustomButton"
 import "./FeaturedProjects.css"

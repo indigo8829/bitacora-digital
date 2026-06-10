@@ -1,3 +1,5 @@
+// subcomponente tarjetas de las categorias en la página de inicio
+
 import './TopicCard.css'
 
 function TopicCard ({categoria}) {

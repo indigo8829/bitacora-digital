@@ -1,3 +1,5 @@
+// componente padre de las tarjetas de las categorias de la página de inicio
+
 import TopicCard from "./TopicCard"
 import categoriesData from "../../../data/categoriesData";
 import "./TopicsSection.css"

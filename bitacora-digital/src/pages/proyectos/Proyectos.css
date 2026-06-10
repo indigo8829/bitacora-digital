@@ -1,0 +1,14 @@
+.listado-proyectos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: bisque;
+    gap: 15px; 
+}
+
+.proyectos-noticias {
+    margin: 20px auto;
+    max-width: 1200px;
+    border: 1px solid black;
+    padding: 15px 20px;
+}

@@ -22,8 +22,8 @@ function Footer () {
                 <div className="navegacion-externa">
                     <h3>Conectar</h3>
                     <ul>
-                        <li><a href="https://www.linkedin.com/in/estefan%C3%ADa-molina-gim%C3%A9nez-670913277/" target="_blank" rel="external">LinkedIn</a></li>
-                        <li><a href="https://github.com/indigo8829/miruta_developer_web_.git" target="_blank" rel="external">GitHub</a></li>
+                        <li><a href="https://www.linkedin.com/in/estefan%C3%ADa-molina-gim%C3%A9nez-670913277/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                        <li><a href="https://github.com/indigo8829/miruta_developer_web_.git" target="_blank" rel="noopener noreferrer">GitHub</a></li>
                     </ul>                
                 </div>
                 <div className="texto">
