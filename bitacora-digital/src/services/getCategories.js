@@ -1,5 +1,6 @@
 /*
- Este fichero conecta con el recurso concreto de la API.
+ Este fichero conecta con el recurso CATEGORIAS de la API.
+ Realiza la solicitud de datos y la lectura de los datos mediante el método GET. 
 */
 
 //URL de la API recurso categories.

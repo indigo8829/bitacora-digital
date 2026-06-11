@@ -1,12 +1,12 @@
 import PostCard from "./components/PostCard";
-import postData from "../../data/postData";
+//import postData from "../../data/postData";
 import CategoryList from "./components/CategoryList";
 import PostList from "./components/PostList";
 import PostDetail from "./components/PostDetail";
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Outlet, useParams } from "react-router-dom";
 import "./Bitacora.css"
+import getPost from "../../services/getPost";
 
 function Bitacora () {
     //Declaro una variable useState para almacenar la categoria seleccionada.
@@ -17,13 +17,28 @@ function Bitacora () {
     //declaramos variable y convertimos id a booleano. (si o no tenemos id en la ruta)
     const esPostDetalle = Boolean(idPost);
 
+    //1. (METODO GET "LECTURA")declarar una variable useState para actualizar/renderizar las post obtenidas de la api.
+    const [ postApi, setPostApi ] = useState([]);
+
+
     //Función actualiza la variable y se comunica con el hijo y el nieto para pasar los datos de categoria seleccionada.
     //paso solo la id de la categoria para poder compararla con la id de las publicaciones.
     function seleccionarCategoria (categoria) {
         setCategoriaSelect(categoria)
     }
     //console.log(categoriaSelect)
+
+    //2. (METODO GET "LECTURA")
+    //cuando se monta el componente...
+    useEffect (() => {
+        //llamamos a la función (servicio) que efectua la llamada a la api para solicitar la lectura de los datos. 
+        getPost() 
+            .then(data => {    //llegan los datos al servidor (2º objeto promesa)
+                setPostApi(data); //actualizamos y renderizamos variable post.
+            }) 
+    }, [])
   
+
     return (
         //Contenido principal de página.
         <main className="bitacora">
@@ -48,7 +63,7 @@ function Bitacora () {
                             para mostrar todas las publicaciones id es 1, el resto hay que usar el filtro para comparar
                             las propiedades del objeto leido con el objeto seleccionado. */}          
                             {categoriaSelect === 1 ? 
-                                postData.map((ObjetoPost, i) => {
+                                postApi.map((ObjetoPost, i) => {  //cambiar la variable a recorrer (3. METODO GET LECTURA API)
                                     return (
                                         <PostCard
                                             key={i} 
@@ -56,7 +71,7 @@ function Bitacora () {
                                         />
                                     )
                             })
-                            : postData
+                            : postApi            //cambiar la variable a recorrer (3. METODO GET LECTURA API)
                                 .filter((post) => post.categoriaId === categoriaSelect)
                                 .map((ObjetoPost, i) => {
                                     return (
@@ -75,6 +90,6 @@ function Bitacora () {
     )
 }
 
-export default Bitacora;
+export default Bitacora
 
  
