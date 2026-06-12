@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import getPost from "../../services/getPost";
+import postPost from "../../services/postPost";
+import getCategories from "../../services/getCategories";
 //import postPost from "../../services/postPost";
 
 function AdminPost () {
@@ -31,8 +33,26 @@ function AdminPost () {
         }));
     }
 
+    //-----FLUJO ENVIO DEL FORM---------
+    //A. (submit) función que se ejecutará al enviar el formulario
+    function handleSubmit(e) {
+        e.preventDefault(); //evitamos que se recargue al enviar el formulario (por defecto)
+        postPost(inputs); //llamamos a la función para CREAR REGISTROS (POST) enviamos a la API los datos del formulario (inputs)
+
+        //(MÉTODO POST "CREAR")
+        //llamamos a la función postPost cuando el servidor devuelva los datos de la CREACIÓN DEL NUEVO REGISTRO 
+        postPost(inputs)
+            .then(data => {   //llegan los datos del servidor
+                setPosts(prev => [...prev, data]) //actualizamos pasando valor actual/previo y valor nuevo (renderizamos)
+            })
+        }
+
     //1. (METODO GET "LECTURA")declarar una variable useState para actualizar/renderizar las post obtenidas de la api.
      const [ posts, setPosts ] = useState([]);
+    
+     //1. (METODO GET "LECTURA")declarar una variable useState para actualizar/renderizar las post obtenidas de la api.
+    //declarar una variable useState para actualizar/renderizar las cat obtenidas de la api.
+    const [ categorias, setCategorias ] = useState([]);
     
     //2. (METODO GET "LECTURA")
     //cuando se monta el componente... 
@@ -42,17 +62,14 @@ function AdminPost () {
             .then(data => {    //llegan los datos al servidor (2º objeto promesa)
                 setPosts(data); //actualizamos variable postApi.
             }) 
+        
+        getCategories() 
+            .then(data => {    //llegan los datos al servidor (2º objeto promesa)
+                setCategorias(data); //actualizamos y renderizamos variable categorias para obtener los datos.
+            }) 
     }, [])
 
-    /*3.(MÉTODO POST "CREAR")
-    //llamamos a la función postPost 
-    postPost()
-        .then(data => {   //llegan los datos del servidor
-            setPostApi(prev => [...prev, data]) //actualizamos pasando valor actual/previo y valor nuevo
-        })*/
-
-
-
+  
     return (
         <main>
             <h1>Administración de publicaciones</h1>
@@ -68,9 +85,9 @@ function AdminPost () {
                     })} 
                 </ul>
             </section>
-            <form >
+            <form onSubmit={handleSubmit}>
                 <div>
-                    <label htmlFor="titulo"></label>
+                    <label htmlFor="titulo">Titulo:</label>
                     <input 
                         id="titulo"
                         name="titulo"
@@ -78,7 +95,67 @@ function AdminPost () {
                         value={inputs.titulo}
                         onChange={handleChange}
                     />
-                    <label htmlFor="detalle"></label>
+                    <label htmlFor="categoria">Categoria:</label>
+                    <select 
+                        name="categoria"
+                        value={inputs.categoria}
+                        onChange={handleChange}
+                    >
+                        <option value="">Selecciona una categoría</option>
+                        {categorias.map((categoria, id) => {
+                            return ( 
+                                <option
+                                key={categoria.id}
+                                value={categoria}
+                                >{categoria.nombre}
+                                </option>
+                            )
+                        })}
+                    </select>
+
+                    <label htmlFor="categoriaid">CategoriaId:</label> 
+                    <select 
+                        name="categoriaid"                                        
+                        value={inputs.categoriaId}                             //obtengo las categorias disponbibles de la mockApi haciendo un GET
+                        onChange={handleChange}
+                    >
+                        <option value="">Selecciona una categoría</option>
+                        {categorias.map((categoria, id) => {
+                            return ( 
+                                <option
+                                key={categoria.id}
+                                value={categoria.id}
+                                >{categoria.id}
+                                </option>
+                            )
+                        })}
+                    </select>
+                  
+                    <label htmlFor="fecha">Fecha:</label>
+                    <input 
+                        id="fecha"
+                        name="fecha"
+                        type="date"
+                        value={inputs.fecha}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="imagen">Imagen:</label>
+                    <input 
+                        id="imagen"
+                        name="imagen"
+                        type="text"
+                        value={inputs.resumen}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="resumen">Resumen:</label>
+                    <input 
+                        id="resumen"
+                        name="resumen"
+                        type="text-area"
+                        value={inputs.resumen}
+                        onChange={handleChange}
+                    />
+                    <label htmlFor="detalle">Detalle:</label>
                     <input 
                         id="detalle"
                         name="detalle"
