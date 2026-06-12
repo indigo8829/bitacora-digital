@@ -30,7 +30,7 @@ function getCategories () {
 
                 // 3. Comprobamos errores HTTP (en el paquete/objeto) y lanza el error al catch para capturarlo.
                 if (!response.ok) {
-                    throw new Error('HTTP ERROR: ${response.status}')
+                    throw new Error(`HTTP ERROR: ${response.status}`)
                 }
 
                 // 4. Abrimos el "paquete", convertimos el body a JSON.

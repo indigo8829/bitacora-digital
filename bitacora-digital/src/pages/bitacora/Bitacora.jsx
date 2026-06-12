@@ -8,6 +8,7 @@ import { Outlet, useParams } from "react-router-dom";
 import "./Bitacora.css"
 import getPost from "../../services/getPost";
 
+
 function Bitacora () {
     //Declaro una variable useState para almacenar la categoria seleccionada.
     const [categoriaSelect, setCategoriaSelect] = useState (null);
@@ -29,16 +30,16 @@ function Bitacora () {
     //console.log(categoriaSelect)
 
     //2. (METODO GET "LECTURA")
-    //cuando se monta el componente...
+    //cuando se monta el componente... 
     useEffect (() => {
         //llamamos a la función (servicio) que efectua la llamada a la api para solicitar la lectura de los datos. 
         getPost() 
             .then(data => {    //llegan los datos al servidor (2º objeto promesa)
-                setPostApi(data); //actualizamos y renderizamos variable post.
+                setPostApi(data); //actualizamos variable postApi.
             }) 
     }, [])
-  
-
+    
+    //console.log(postApi);
     return (
         //Contenido principal de página.
         <main className="bitacora">

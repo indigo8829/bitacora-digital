@@ -6,6 +6,7 @@ import Bitacora from "../pages/bitacora/Bitacora.jsx";
 import Hablemos from "../pages/hablemos/Hablemos.jsx";
 import PostDetail from "../pages/bitacora/components/PostDetail.jsx";
 import Proyectos from "../pages/proyectos/Proyectos.jsx";
+import AdminPost from "../pages/admin/AdminPost.jsx";
 
 const router = createBrowserRouter ([
     {
@@ -37,7 +38,11 @@ const router = createBrowserRouter ([
             {
                 path:'hablemos',
                 element:<Hablemos/>
-            }
+            },
+            {
+                path:'admin',
+                element:<AdminPost/>
+            },
         ]
     }
 ])

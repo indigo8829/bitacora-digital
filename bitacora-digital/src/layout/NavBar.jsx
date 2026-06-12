@@ -12,6 +12,7 @@ function NavBar () {
                 <Link to='/proyectos'>Proyectos</Link>
                 <Link to='/bitacora'>Bitácora</Link>
                 <Link to='/hablemos'>Hablemos</Link>
+                <Link to='/admin'>🗝️</Link>
             </nav>
         </>
     ) 

@@ -34,6 +34,7 @@ function ContactForm () {
     const handleChange = (e) => {
         //utilizamos desestructuring  para no declarar cada una de las constantes tipo const name = e.target.name;
         //optenemos el target de cada campo del form
+        //name es el campo, value el valor, type el tipo de elemento y cheched (booleano)
         const { name, value, type, checked } = e.target
 
         //actualizamos el estado de las variables (prev es estado actual de las variables)
