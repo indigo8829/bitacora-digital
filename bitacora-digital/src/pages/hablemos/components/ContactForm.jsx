@@ -1,9 +1,9 @@
 import { useState } from "react";
 import Modal from "../../../components/Modal.jsx";
-
+import postContact from "../../../services/postContact.js";
 
 //En el form el valor del name en el input debe coincidir con la propiedad del objeto en value.
-const apiUrl = 'https://6a298daaf59cb8f65f1d565c.mockapi.io/api/contactos';
+//const apiUrl = 'https://6a298daaf59cb8f65f1d565c.mockapi.io/api/contactos';
 
 
 function ContactForm () {
@@ -34,7 +34,7 @@ function ContactForm () {
     const handleChange = (e) => {
         //utilizamos desestructuring  para no declarar cada una de las constantes tipo const name = e.target.name;
         //optenemos el target de cada campo del form
-        //name es el campo, value el valor, type el tipo de elemento y cheched (booleano)
+        // para tipe text y text-area necesito name y value pero para checkbox necestipo el type (tipo de input) y el booleano de checked.
         const { name, value, type, checked } = e.target
 
         //actualizamos el estado de las variables (prev es estado actual de las variables)
@@ -98,20 +98,29 @@ function ContactForm () {
 
         //6. configuración de la petición POST que necesita fetch para enviar los datos.
         //creamos el objeto que enviaremos con la informacion del form y lo metemos en la petición http
-        const requestData = { 
+        /*const requestData = { 
             method: 'POST', // crea un nuevo registro
             body: JSON.stringify(nuevoContacto), //convierte los datos en JSON.
             headers: {   //le dice al servidor que le envia el JSON. 
                 'Content-Type': 'application/json; charset=UTF-8',
             },
-        }
-     
-        console.log(nuevoContacto);
-        console.log(requestData);
+        }*/
+
+        postContact(nuevoContacto)
+            .then(data => {
+                setInputs(formInicio)//limpiar el formulario
+                setIsOpenModal(true)//cambiamos el estado del modal para mostrarlo cuando confirmemos el envio/recepcion de datos
+            })            
+            .finally(() => {
+                setSubmittingForm(false)//habilitamos el formulario
+            })
+
+        //console.log(nuevoContacto);
+        //console.log(requestData);
         //7. enviar los datos al servidor mediante fetch indicando la API y el tipo de petición
         //8. manejo de errores 
         //9. volver a habilitar los campos del form 
-        fetch(apiUrl, requestData)
+        /*fetch(apiUrl, requestData)
 
             .then(response => {
                 if(response.ok){
@@ -132,7 +141,7 @@ function ContactForm () {
             })
             .finally(() => {
                 setSubmittingForm(false)//habilitamos el formulario
-            })
+            })*/
     }
 
     //función para actualizar la variable que almacena/renderiza los valores de los inputs, en este caso valor inicial (para borrar/limpiar)
@@ -240,4 +249,4 @@ function ContactForm () {
     )
 }
 
-export default ContactForm;
+export default ContactForm

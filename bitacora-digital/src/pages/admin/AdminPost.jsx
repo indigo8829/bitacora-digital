@@ -39,8 +39,8 @@ function AdminPost () {
     //obtiene el input modificado y lo actualiza manteniendo el resto intactas con el operador spread
     const handleChange = (e) => {
         //utilizamos desestructuring  para no declarar cada una de las constantes tipo const name = e.target.name;
-        //optenemos el target de cada campo del form 
-        const { name, value, type } = e.target
+        //optenemos el target de cada campo del form (para tipe text, date, textarea y select necesito name y value)
+        const { name, value } = e.target
 
         //actualizamos el estado de las variables (prev es estado actual de las variables)
         setInputs(prev => ({
@@ -68,6 +68,7 @@ function AdminPost () {
                 newErrors[campo] = "Campo obligatorio"; 
             }
         });  
+        //***************PENDIENTE LA VALIDACIÓN DE CATEGORIA ID /RELACIONAR CATEGORIAID CON CATEGORIA*******/
         //actualizar los errores de validacion de campos ()
         setErrors(newErrors)
 
@@ -157,7 +158,7 @@ function AdminPost () {
             <section>
                 <h2>Lista de publicaciones:</h2>
                 <div>
-                    {posts.map((Obpost, id) => {  //cambiar la variable a recorrer (3. METODO GET LECTURA API)
+                    {posts.map((Obpost, i) => {  //cambiar la variable a recorrer (3. METODO GET LECTURA API)
                         return ( 
                             <div  key={Obpost.id}>
                                 <h3>{Obpost.titulo}</h3>
@@ -195,8 +196,8 @@ function AdminPost () {
                             {/*Hago un filter para eliminar la 1º categoria de las publicaciones y recorro la nueva array para mostrar las categorias restantes */}
                             {/*Obtengo las categorias disponbibles de la mockApi haciendo un GET (arriba) y aqui un map para recorrer la array de datos devuelta por la api (state)*/}
                             {categorias
-                                .filter((categoria) => categoria.id != 1)
-                                .map((categoria, id) => {
+                                .filter((categoria) => categoria.id !== 1)
+                                .map((categoria, i) => {
                                     return ( 
                                         <option
                                             key={categoria.id}
@@ -219,8 +220,8 @@ function AdminPost () {
                         >
                             <option value="">Selecciona una categoría</option>
                             {categorias
-                                .filter((categoria) => categoria.id != 1)
-                                .map((categoria, id) => {
+                                .filter((categoria) => categoria.id !== 1)
+                                .map((categoria, i) => {
                                     return ( 
                                         <option
                                             key={categoria.id}
