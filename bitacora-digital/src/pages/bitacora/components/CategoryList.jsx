@@ -24,19 +24,16 @@ function CategoryList ({clickCategoryCallBack}) {
 
     return (
         //Capturamos la llamada del hijo y se la pasamos al padre por props.
-        <>
-            <nav className="category-list">
-                {categories.map((ObjetoCategoria, i) => {  //cambiar la variable a recorrer (3. METODO GET LECTURA API)
-                    return (
-                        <CategoryCard 
-                            key={i}
-                            categoria={ObjetoCategoria}
-                            clickCategoryCallBack={clickCategoryCallBack}/>
-                    )
-                })}  
-            </nav>
-             
-        </>
+        <nav className="category-list">
+            {categories.map((ObjetoCategoria, i) => {  //cambiar la variable a recorrer (3. METODO GET LECTURA API)
+                return (
+                    <CategoryCard 
+                        key={i}
+                        categoria={ObjetoCategoria}
+                        clickCategoryCallBack={clickCategoryCallBack}/>
+                )
+            })}  
+        </nav>
     )
 }
 

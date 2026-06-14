@@ -13,7 +13,6 @@ function ProjectCard ({proyecto}) {
                 <p>{proyecto.descripcion}</p>
             </div>
         </div>
-     
     )
 }
 

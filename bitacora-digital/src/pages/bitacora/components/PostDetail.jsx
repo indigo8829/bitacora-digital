@@ -15,23 +15,20 @@ function PostDetail () {
     const postSelecc = postData.find((post) => post.id === idPostNum);
     //console.log(postSelecc);         
     return (
-        <>
-            <article className="post-detail">
-                <div>
-                    <h1>{postSelecc.titulo}</h1>
-                    <p>CONTENIDO COMPLETO DE LA PUBLICACION</p>
-                    <h3>{postSelecc.categoria}</h3>
-                    <h4>{postSelecc.fecha}</h4>
-                </div>
-                <div>
-                    <img src={postSelecc.imagen} alt="" />
-                </div>
-                <div>
-                    <h2>{postSelecc.titulo}</h2>
-                    <p>{postSelecc.detalle}</p>                   
-                </div>
-            </article>
-        </>
+        <article className="post-detail">
+            <div>
+                <h1>{postSelecc.titulo}</h1>
+                <h3>{postSelecc.categoria}</h3>
+                <h4>{postSelecc.fecha}</h4>
+            </div>
+            <div>
+                <img src={postSelecc.imagen} alt="" />
+            </div>
+            <div>
+                <h2>{postSelecc.titulo}</h2>
+                <p>{postSelecc.detalle}</p>                   
+            </div>
+        </article>
     )
 }
 

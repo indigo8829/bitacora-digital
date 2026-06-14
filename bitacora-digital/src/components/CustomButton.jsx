@@ -1,12 +1,11 @@
 import { Link } from "react-router-dom";
 import "./CustomButton.css"
 
-function CustomButton ({destino, texto}) {
-
+function CustomButton ({destino, texto, className}) {
 
     return (
         <>
-            <Link className="custom-button" to={destino}>{texto}</Link>
+            <Link className={`custom-button ${className}`} to={destino}>{texto}</Link>
         </>
     )
 }

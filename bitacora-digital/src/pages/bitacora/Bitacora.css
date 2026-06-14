@@ -1,30 +1,56 @@
+/*-------------- Bitacora------- */
+/*main de bitacora*/
+.bitacora {
+  min-height: 100%;
+  background-color: var(--arena);
+}
 
+/*secciones todas*/
+.bitacora > section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--espac-xl) var(--espac-xl);
+}
+
+.bitacora > section > h1 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-xl);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  letter-spacing: 1px;
+  margin-bottom: var(--espac-l);
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--ocre);
+}
+
+/* contenedor de categorias */
 .bitacora-principal {
-    width: 80%;
-    margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 }
 
-
-/* LISTA PUBLICACIONES + PUBLICACION DETALLE*/
+/* contenedor de lista publicaciones postlist */
 .bitacora-detalle {
-    display: flex;
-    flex-direction: row;
-    gap:5px;
-    width: 80%;
-    margin: auto;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 32px;
+  align-items: start;
 }
 
-
+/* contenedor de lista + postcards */
 .bitacora-menus {
-    display: flex;
-    flex-direction: row;
-    gap: 5px;
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 24px;
+  align-items: start;
 }
 
-/*PUBLICACIONES RESUMEN*/
+/* espacio para la tarjetas de posts */
 .bitacora-post {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px; 
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 20px;
 }
+
+

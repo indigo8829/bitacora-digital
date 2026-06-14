@@ -6,22 +6,20 @@ import "./PostList.css";
 
 function PostList ( {post}) {
     return (
-        <>
-            <aside className="post-list">
-                <h2>Publicaciones</h2>
+        <aside className="post-list">
+            <h2>Publicaciones</h2>
 
-                <ul>
-                    {postData.map((ObjetoPost, i) => {
-                        return (
-                            <PostListItem
-                                key={i} 
-                                post={ObjetoPost}
-                            />
-                        )
-                    })}
-                </ul>
-            </aside>
-        </>
+            <ul>
+                {postData.map((ObjetoPost, i) => {
+                    return (
+                        <PostListItem
+                            key={i} 
+                            post={ObjetoPost}
+                        />
+                    )
+                })}
+            </ul>
+        </aside>
     )
 }
 

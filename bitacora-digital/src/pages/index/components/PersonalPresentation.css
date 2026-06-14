@@ -1,8 +1,38 @@
+/* ---------PersonalPresentation----------*/
+
+/*contenedor principal*/
 .personal-presentation {
-    max-width: 300px;
-    margin-left: 20px;
-    display: flex;
-    flex-direction: column;
-    border: 1px solid black;
-    background-color: rgb(203, 249, 249);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espac-m);
+  text-align: center;
+}
+
+/*coontenedor de la imagen*/
+.personal-presentation > div:first-child img {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--ocre);
+  opacity: 0.92;
+}
+
+/*titulo*/
+.personal-presentation h3 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-s);
+  font-weight: var(--semibold);
+  color: var(--pergamino);
+  margin-bottom: var(--espac-xs);
+}
+
+/*texto*/
+.personal-presentation p {
+  font-size: var(--parrafo-s);
+  color: var(--niebla);
+  opacity: 0.8;
+  line-height: 1.8;
+  margin-bottom: var(--espac-xs);
 }

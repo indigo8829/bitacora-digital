@@ -1,4 +1,26 @@
 /*cada li del titulo de la lista de publicaciones*/
-.post-list-item {
+/*----------- PostListItem----------- */
 
+.post-list-item {
+  border-radius: var(--radio-s);
+  transition: background-color 1s;
+}
+
+.post-list-item:hover {
+  background-color: var(--niebla);
+}
+
+.post-list-item a {
+  display: block;
+  padding: var(--espac-s) var(--espac-m);
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-s);
+  font-weight: var(--regular);
+  color: var(--corteza);
+  line-height: 1.4;
+  transition: color 1s;
+}
+
+.post-list-item a:hover {
+  color: var(--violeta);
 }

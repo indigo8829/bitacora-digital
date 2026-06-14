@@ -1,0 +1,175 @@
+/* ------------------ContactForm---------------------/
+
+/* La sección que envuelve el form */
+.contact-form, .hablemos section:nth-child(4) > section {
+  padding: 48px;
+}
+
+.contact-form-wrapper {
+  max-width: 640px;
+}
+
+/* caja principal del section */
+.contact-form {
+  padding: var(--espac-2xl);
+  background-color: transparent;
+}
+
+/* titulo del la seccion */
+.contact-form h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-m);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  margin-bottom: var(--espac-s);
+}
+
+/* parrafo de la seccion */
+.contact-form > p {
+  font-size: var(--parrafo-m);
+  color: var(--ocre);
+  line-height: 1.6;
+  margin-bottom: var(--espac-m);
+  max-width: 560px;
+}
+
+/* el formulario */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 600px;
+}
+
+/* cajas de los label+inpunt*/
+.contact-form form > div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* labels del formulario */
+.contact-form label {
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-s);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--corteza);
+}
+
+/* cajas de los inputs (text, email, textarea) */
+.contact-form input[type="text"],
+.contact-form input[type="email"],
+.contact-form textarea {
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-m);
+  color: var(--corteza);
+  background-color: var(--blanco);
+  border: 1px solid var(--corteza);
+  border-radius: var(--radio-s);
+  padding: var(--espac-s) var(--espac-l);
+  width: 100%;
+  transition: border-color 1s, box-shadow 1s;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: var(--pizarra);
+  box-shadow: 0 0 0 1px var(--pizarra);
+}
+
+.contact-form input:disabled,
+.contact-form textarea:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--pizarra);
+}
+
+.contact-form textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.7;
+}
+
+/* input de aceptar politica */
+.contact-form input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--violeta);
+  margin-right: var(--espac-m);
+  cursor: pointer;
+}
+
+.contact-form label:has(input[type="checkbox"]) {
+  display: flex;
+  align-items: center;
+  font-size: var(--parrafo-s);
+  text-transform: none;
+  letter-spacing: 1px;
+  font-weight: var(--regular);
+  cursor: pointer;
+}
+
+/* mensajes de error por campos vacios */
+.error-mensaje {
+  font-size: var(--parrafo-xs);
+  color: var(--alerta);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  padding: var(--espac-xs) var(--espac-s);
+  background-color: var(--arena);
+  border-radius: var(--radius-sm);
+  border-left: 2px solid var(--alerta);
+}
+
+/* botones del formulario ultimo div del form*/
+.contact-form form > div:last-child {
+  flex-direction: row;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* boton de envio del formlario */
+.contact-form button[type="submit"] {
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-s);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  padding: var(--espac-s) var(--espac-l);
+  background-color: var(--violeta);
+  color: var(--niebla);
+  border: 1px solid var(--violeta);
+  border-radius: var(--radio-s);
+  cursor: pointer;
+}
+
+.contact-form button[type="submit"]:hover:not(:disabled) {
+  background-color: var(--pizarra);
+}
+
+.contact-form button[type="submit"]:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/*boton de borrar formulario*/
+.contact-form button[type="button"] {
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-s);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  padding: var(--espac-s) var(--espac-l);
+  background-color: transparent;
+  color: var(--corteza);
+  border: 1px solid var(--corteza);
+  border-radius: var(--radio-s);
+  cursor: pointer;
+}
+
+.contact-form button[type="button"]:hover:not(:disabled) {
+  background-color: var(--pergamino);
+}
+
+

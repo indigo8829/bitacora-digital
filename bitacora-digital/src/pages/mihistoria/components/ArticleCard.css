@@ -1,6 +1,35 @@
+/* ------------- ArticleCard ---------- */
+/* tarjeta de texto sin imagen
+la uso en varios componentes MiHistoria, Hablemos, Proyectos */
+
+/*contenedor de articulo*/
 .article-card {
-    margin: 20px auto;
-    max-width: 1200px;
-    border: 1px solid black;
-    padding: 15px 20px;
+  padding: var(--espac-xl) var(--espac-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
+
+.article-card h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-m);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  line-height: 1.2;
+}
+
+.article-card p {
+  font-size: var(--parrafo-l);
+  color: var(--corteza);
+  line-height: 1.70;
+  max-width: 700px;
+}
+
+.article-card-claro h2,
+.article-card-claro p {
+  color: var(--pergamino);
+  opacity: 0.9;
+  max-width: 720px;
+}
+
+

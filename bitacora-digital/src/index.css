@@ -1,60 +1,109 @@
   /*-----------------REGLAS DE ESTILOS GLOBALES DEL PROYECTO -----------*/
   
-  /* Resetear (dimension total real)*/
-* {
+/*Fuentes generales*/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+/* Colores generales */
+:root {
+    --blanco: #FFF;
+    --pergamino: #F5EAD0;
+    --arena: #F5E1D0;
+    --niebla: #DCD4F5;
+    --cielo: #E3E8F5;
+    --ocre: #A08E63;
+    --corteza: #755335;
+    --violeta: #544A75;
+    --pizarra: #4B5875;
+    --oscuro: #2a1f14;
+    --oscuro-borde:  #3d2e1e;
+    --alerta: #c15d5d;
+
+    /*Tipografias*/
+    
+    --font-titulos: "Cormorant Garamond", Georgia, serif;
+    --font-parrafos: "Inter", sans-serif;
+
+    /*grosor de tipografia*/
+    --light: 300;
+    --regular: 400;
+    --medium: 500;
+    --semibold: 600;
+
+    /*tamaño tipografía*/
+    --parrafo-xs: 11px;
+    --parrafo-s: 12px;
+    --parrafo-m: 14px;
+    --parrafo-l: 15px;
+    --parrafo-xl: 16px;
+    --titulo-s: 22px;
+    --titulo-m: 28px;
+    --titulo-l: 32px;
+    --titulo-xl: 42px;
+
+    /*espaciado*/
+    --espac-xs: 4px;
+    --espac-s: 8px;
+    --espac-m: 16px;
+    --espac-l: 24px;
+    --espac-xl: 40px;
+    --espac-2xl: 56px;
+
+    /*radios*/
+    --radio-s: 4px;
+    --radio-m: 8px;
+    --radio-l: 12px;
+}
+
+
+/* Resetear (dimension total real)*/
+*, *::before, *::after {
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
 }
 
-body {
-    font-family: 'Courier New', Courier, monospace;
+html { scroll-behavior: smooth; }
+
+body{
+   font-family: var(--font-parrafos);
+   font-weight: var(--regular);
+   font-size: var(--text-l);
+   line-height: 1.75;
+   background-color: var(--pergamino);
+   color: var(--corteza);
+   -webkit-font-smoothing: antialiased;
 }
 
-/* Colores generales */
-:root {
-    --rosa: #F294A5;
-    --rosa-sec: #D996A2;
-    --verde: #9DBF8E;
-    --verde-claro: #AFBFA3;
-    --verde-sombras: #26321d;
-    --verde-oscuro: #292D26;
-    --beige: #F2EADF;
-    --marron: #735449;
+h1,h2,h3,h4 {
+    font-family: var(--font-titulos);
+    font-weight: var(--semibold);
+    line-height: 1.20;
+    color: var(--corteza);
 }
 
-/*Fuentes generales*/
-@import url('https://fonts.googleapis.com/css2?family=Emilys+Candy&family=Inconsolata:wght@200..900&display=swap');
+h1 { font-size: var(--titulo-xl);}
+h2 { font-size: var(--titulo-l);}
+h3 { font-size: var(--titulo-m);}
+h4 { font-size: var(--titulo-s);}
 
-h1 {
-    font-family: "Inconsolata", monospace;
-    font-optical-sizing: auto;
-    font-size: xx-large;
-    font-weight: bolder;
-    font-style: normal;
-    font-variation-settings:"wdth" 100;
-    text-transform: uppercase;
-    color: var(--rosa);
-    text-shadow: 1px 1px 3px var(--rosa-sec);
-    text-align: center;
-}
-
-h2 {
-    text-transform: uppercase;
-    color: var(--verde);
-    text-shadow: 1px 1px 3px var(--verde-claro);
-    text-align: center;
-    font-size: x-large;
-}
 
 p {
-   margin-bottom: 10px;
-   font-size: medium;
-   color: var(--verde-sombras);
-   text-align: left; 
+   font-family: var(--font-parrafos);
+   font-size: var(--parrafo-l) ;
+   font-weight: var(--regular);
+   line-height: 1.80;
+   color: var(--ocre);
 }
 
 a {
     text-decoration: none;
     color: inherit;
 }
+
+img { 
+    display: block; 
+    max-width: 100%;
+}
+

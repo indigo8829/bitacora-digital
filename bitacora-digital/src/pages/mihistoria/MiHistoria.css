@@ -1,0 +1,51 @@
+/* -------------------Mi historia------------ */
+/*caja del main*/
+.mi-historia {
+  min-height: 100%;
+  background-color: var(--pergamino);
+}
+
+/*titulo de la pagina*/
+.mi-historia > h1 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-xl);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  padding: var(--espac-xl) var(--espac-2xl) var(--espac-m);
+  letter-spacing: 1px;
+  border-bottom: 1px solid var(--ocre);
+  letter-spacing: 1px;
+  padding-bottom: var(--espac-l);
+}
+
+/* secciones con articulos generados con componente */
+.mi-historia > section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* cada articulo lo alternamos en color de fondo */
+.mi-historia > section > article:nth-child(odd) {
+  background-color: var(--pergamino);
+  border-bottom: 1px solid var(--ocre);
+}
+
+.mi-historia > section > article:nth-child(even) {
+  background-color: var(--arena);
+  border-bottom: 1px solid  var(--ocre);
+}
+
+/* linea decorativa izquierda en articulos pares, genera un salto */
+.mi-historia > section > article:nth-child(even) {
+  border-left: 4px solid var(--corteza);
+  padding-left: var(--espac-2xl);
+}
+
+/*boton para navegar */
+.contenedor-botones {
+  padding: var(--espac-xl) var(--espac-xl) var(--espac-xl);
+  background-color: var(--pergamino);
+  margin-left: var(--espac-m);
+}
+
+

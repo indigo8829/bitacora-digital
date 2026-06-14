@@ -1,0 +1,282 @@
+/* ---------------------AdminPost--------------*/
+/*contenedor principal que contiene titulo, seccion + seccion*/
+.admin-post {
+  min-height: 100%;
+  background-color: var(--arena);
+  padding: var(--espac-xl) var(--espac-2xl) var(--espac-2xl);
+}
+
+/*titulo de la pagina*/
+.admin-post > h1 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-l);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  margin-bottom: var(--espac-l);
+  padding-bottom: var(--espac-m);
+  border-bottom: 1px solid var(--ocre);
+}
+
+/* contenedor de las dos columnas */
+.section-contenedor {
+  display: grid;
+  grid-template-columns: 1fr 500px;
+  gap: 40px;
+  align-items: start;
+}
+
+/************** contenedor de la lista de publicaciones ***********/
+.lista-publicaciones {
+  background-color: var(--blanco);
+  border: 1px solid var(--ocre);
+  border-radius: var(--radio-l);
+  padding: var(--espac-l);
+}
+
+/*titulo lista de publicaciones*/
+.lista-publicaciones h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-s);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  margin-bottom: var(--espac-l);
+  padding-bottom: var(--espac-m);
+  border-bottom: 1px solid var(--arena);
+  text-transform: uppercase;
+}
+
+/* caja articulo de publicacion */
+.articulo-post {
+  padding: var(--espac-m);
+  border: 1px solid var(--ocre);
+  border-radius: var(--radio-l);
+  margin-bottom: var(--espac-l);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  background-color: var(--pergamino);
+  transition: box-shadow 1s;
+}
+
+.articulo-post:hover {
+  box-shadow: 0 2px 10px var(--pizarra);
+}
+
+/*titulo de la publicacion*/
+.articulo-post h3 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-s);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  margin-bottom: var(--espac-s);
+}
+
+/* contenedor de CATEGORIAS y categoriasid*/
+.texto-categorias {
+  display: flex;
+  gap: 8px;
+  margin-bottom: var(--espac-xs);
+}
+
+.texto-categorias p {
+  font-size: var(--parrafo-xs);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--pizarra);
+  background-color: var(--niebla);
+  padding: var(--espac-xs) var(--espac-s);
+  border-radius: 99px;
+}
+
+/* parrafos */
+.articulo-post > div:first-child > p {
+  font-size: var(--parrafo-s);
+  color: var(--corteza);
+  line-height: 1.7;
+  margin-top: var(--espac-xs);
+}
+
+/* contenedores de los botones del post */
+.articulo-post > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.articulo-post button {
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-xs);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  padding: 6px 14px;
+  border-radius: var(--radio-m);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background-color 1s;
+}
+
+/*boton de editar*/
+.articulo-post button:first-child {
+  background-color: var(--cielo);
+  color: var(--pizarra);
+  border-color: var(--pizarra);
+}
+
+.articulo-post button:first-child:hover {
+  background-color: var(--niebla);
+}
+
+/*boton de eliminar*/
+.articulo-post button:last-child {
+  background-color: var(--arena);
+  color: var(--alerta);
+  border-color: var(--alerta);
+}
+
+.articulo-post button:last-child:hover {
+  background-color: var(--alerta);
+  color: var(--blanco);
+}
+
+/***************** formulario de nueva publicación *************/
+/*contenedor del formulario*/
+.form-container {
+  background-color: var(--blanco);
+  border: 1px solid var(--ocre);
+  border-radius: var(--radio-l);
+  padding: var(--espac-l);
+  position: sticky;
+  top: 80px;
+}
+
+/*titulo del formulario*/
+.form-container h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-s);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  margin-bottom: var(--espac-m);
+  padding-bottom: var(--espac-m);
+  border-bottom: 1px solid var(--arena);
+  text-transform: uppercase;
+}
+
+/*el formulario */
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/*los inputs + labels*/
+.form-container form > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/*las etiquetas*/
+.form-container label {
+  font-size: var(--parrafo-xs);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--corteza);
+  margin-top: var(--espac-xs);
+}
+
+/*cajas de los inputs del formulario*/
+.form-container input[type="text"],
+.form-container input[type="date"],
+.form-container select,
+.form-container textarea {
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-m);
+  color: var(--corteza);
+  background-color: var(--pergamino);
+  border: 1px solid var(--ocre);
+  border-radius: var(--radio-m);
+  padding: var(--espac-s) var(--espac-m);
+  width: 100%;
+  outline: none;
+  transition: border-color 1s;
+}
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  box-shadow: 0 2px 10px var(--pizarra);
+  
+}
+
+/*caja del textarea*/
+.form-container textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/*los dos select */
+.form-container select {
+  cursor: pointer;
+}
+
+/*erorres de campos vacios*/
+.form-container .error {
+  font-size: var(--parrafo-xs);
+  color: var(--alerta);
+  background-color: var(--arena);
+  padding: var(--espac-xs) var(--espac-s);
+  border-radius: var(--radio-s);
+  border-left: 2px solid var(--alerta);
+}
+
+/* ultimo div del form caja botones */
+.form-container form > div:last-child {
+  display: flex;
+  gap: 10px;
+  margin-top: var(--espac-xs);
+}
+
+/*boton de enviar*/
+.form-container button[type="submit"] {
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-s);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  padding: var(--espac-s) var(--espac-l);
+  background-color: var(--cielo);
+  color: var(--pizarra);
+  border: 1px solid var(--pizarra);
+  border-radius: var(--radio-s);
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 1s;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: var(--violeta);
+  color: var(--blanco);
+}
+
+/*boton de borrar*/
+.form-container button[type="button"] {
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-s);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  padding: var(--espac-s) var(--espac-m);
+  background-color: var(--arena);
+  color: var(--corteza);
+  border: 1px solid var(--ocre);
+  border-radius: var(--radio-s);
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.form-container button[type="button"]:hover {
+  background-color: var(--alerta);
+  color: var(--blanco);
+}

@@ -1,10 +1,82 @@
+/*-------------PostDetail---------------------- */
+
+/*contenedor principal*/
 .post-detail {
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    margin: 30px;
-    padding: 20px;
-    border: 1px solid #000000 ;
-    border-radius: 8px;
-    background-color: #f5e7dd;
+  background-color: var(--blanco);
+  border: 1px solid var(--ocre);
+  border-radius: var(--radio-l);
+  overflow: hidden;
 }
+
+/* DIV: cabecera del post */
+.post-detail > div:first-child {
+  padding: var(--espac-l) var(--espac-l) var(--espac-l);
+  background-color: var(--violeta);
+}
+
+/*titulo principal de la cabecera*/
+.post-detail > div:first-child h1 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-l);
+  font-weight: var(--semibold);
+  color: var(--pergamino);
+  line-height: 1.2;
+  margin-bottom: var(--espac-m);
+}
+
+/* categoría de la cabecera */
+.post-detail > div:first-child h3 {
+  font-family: var(--font-titulos);
+  font-size: var(--parrafo-l);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--pergamino);
+  opacity: 0.90;
+  margin-bottom: var(--espac-s);
+}
+
+/* Fecha de la cabecera*/
+.post-detail > div:first-child h4 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-s);
+  font-weight: var(--regular);
+  color: var(--pergamino);
+  opacity: 0.6;
+}
+
+/* Imagen destacada */
+.post-detail > div:nth-child(2) {
+  width: 100%;
+  max-height: 350px;
+  overflow: hidden;
+}
+
+.post-detail > div:nth-child(2) img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  display: block;
+}
+
+/* contenedor  texto del post */
+.post-detail > div:last-child {
+  padding: var(--espac-l) var(--espac-l) var(--espac-xl);
+}
+
+.post-detail > div:last-child h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-s);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  margin-bottom: var(--espac-m);
+}
+
+.post-detail > div:last-child p {
+  font-size: var(--parrafo-xl);
+  color: var(--corteza);
+  line-height: 1.85;
+  max-width: fit-content;
+}
+
+

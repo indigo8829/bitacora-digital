@@ -1,12 +1,34 @@
+/* -------------IndexHero-------------- */
+
+/*contenedor principal del articulo*/
 .index-hero {
-    background-color: aqua;
-    border: 1px solid black;
-
+  display: flex;
+  flex-direction: column;
+  gap: var(--espac-m);
 }
 
+.index-hero h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-xl);
+  font-weight: var(--semibold);
+  color: var(--cielo);
+  line-height: 1.15;
+  letter-spacing: 1px;
+}
+
+.index-hero p {
+  font-size: var(--parrafo-m);
+  color: var(--cielo);
+  opacity: 0.9;
+  line-height: 1.8;
+  max-width: 500px;
+}
+
+/*contenedor de botones*/
 .index-hero-container-button {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    
+  display: flex;
+  gap: var(--espac-s);
+  flex-wrap: wrap;
+  margin-top: var(--espac-s);
 }
+

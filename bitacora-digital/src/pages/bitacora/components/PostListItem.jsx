@@ -5,11 +5,9 @@ import "./PostListItem.css"
 
 function PostListItem ( {post}) {
     return (
-        <>
-            <li className="post-list-item">
-                <Link to={`/bitacora/${post.id}`}>{post.titulo}</Link>
-            </li>
-        </>
+        <li className="post-list-item">
+            <Link to={`/bitacora/${post.id}`}>{post.titulo}</Link>
+        </li>
     )
 }
 

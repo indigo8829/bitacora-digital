@@ -1,6 +1,53 @@
+/* --------------AboutBitacora--------------*/
+
+/*contenedor principal*/
 .about-bitacora {
-    width: 80% auto;
-    border: 1px solid black;
-    background-color: burlywood;
+  border-top: 1px solid var(--cielo);
+  margin-top: var(--espac-xl);
+  padding-top: var(--espac-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espac-m);
 }
 
+/*titulo*/
+.about-bitacora h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-s);
+  font-weight: var(--semibold);
+  color: var(--cielo);
+}
+
+/*texto*/
+.about-bitacora p {
+  font-size: var(--parrafo-m);
+  color: var(--cielo);
+  opacity: 0.85;
+  line-height: 1.8;
+}
+
+/*lista desordenada*/
+.about-bitacora ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding-left: var(--espac-m);
+}
+
+.about-bitacora ul li {
+  font-size: var(--parrafo-m);
+  color: var(--niebla);
+  opacity: 0.9;
+  position: relative;
+  padding-left: var(--espac-m);
+}
+
+/*simbolo de la lista desordenada*/
+.about-bitacora ul li::before {
+  content: '*';
+  position: absolute;
+  left: 0;
+  color: var(--ocre);
+  font-size: var(--parrafo-m);
+}

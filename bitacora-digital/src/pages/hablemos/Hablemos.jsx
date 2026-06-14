@@ -1,12 +1,14 @@
 import ArticleCard from "../mihistoria/components/ArticleCard";
 import ContactForm from "./components/ContactForm";
+import "./Hablemos.css"
+import "../mihistoria/components/ArticleCard.css";
 
 function Hablemos () {
 
     return (
         <main className="hablemos">
             <section>
-                <ArticleCard
+                <ArticleCard className="article-card-claro"
                 articulo={{
                     titulo:"",
                     contenido: "Detrás de cada proyecto, de cada aprendizaje y de cada publicación, siempre hay personas.Esta bitácora nace del deseo de compartir experiencias, documentar procesos y abrir conversaciones que puedan generar nuevas conexiones, colaboraciones o simplemente intercambios valiosos entre personas con intereses afines.Si alguna reflexión te ha resonado, si compartimos inquietudes similares o si crees que podemos aportar valor mutuamente, estaré encantada de escucharte."
@@ -61,4 +63,4 @@ function Hablemos () {
     )
 }
 
-export default Hablemos;
+export default Hablemos

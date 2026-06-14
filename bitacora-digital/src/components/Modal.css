@@ -1,17 +1,70 @@
+/* ---------Modal-------------*/
+
+/* caja principal */
 .modal-contenedor {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.5);
-    display: flex;
-    align-items: center;
-    justify-Content: center;
+  position: fixed;
+  inset: 0;
+  background-color: var(--oscuro-borde);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: var(--espac-l);
+  backdrop-filter: blur(2px);
 }
 
+/* Caja secundaria del modal */
 .modal-contenido {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
+  background-color: var(--pergamino);
+  border-radius: var(--radio-l);
+  padding: var(--espac-xl);
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 20px 30px var(--corteza);
+  border-top: 3px solid var(--violeta);
 }
+
+@keyframes modal-entrada {
+  from { opacity: 0; transform: translateY(-12px) scale(0.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/*texto , titulo y parrafo */
+.modal-contenido h2 {
+  font-family: var(--font-parrafos);
+  font-size: var(--espac-l);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+}
+
+.modal-contenido p {
+  font-size: var(--parrafo-l);
+  color: var(--corteza);
+  line-height: 1.7;
+}
+
+/* boton de cerrar modal */
+.modal-contenido button {
+  align-self: flex-end;
+  margin-top: var(--espac-s);
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-s);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: var(--espac-s) var(--espac-m);
+  background-color: transparent;
+  color: var(--violeta);
+  border: 1px solid var(--violeta);
+  border-radius: var(--radio-s);
+  cursor: pointer;
+  transition: background-color 1s;
+}
+
+.modal-contenido button:hover {
+  background-color: var(--niebla);
+}
+

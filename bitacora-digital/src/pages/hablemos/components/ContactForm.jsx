@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Modal from "../../../components/Modal.jsx";
 import postContact from "../../../services/postContact.js";
+import "./ContactForm.css";
 
 //En el form el valor del name en el input debe coincidir con la propiedad del objeto en value.
 //const apiUrl = 'https://6a298daaf59cb8f65f1d565c.mockapi.io/api/contactos';
@@ -150,7 +151,7 @@ function ContactForm () {
     }
 
     return (
-        <section>
+        <section className="contact-form">
             <h2>¿Te apetece escribir?</h2>
             <p>Puedes utilizar este formulario para enviarme un mensaje. Intentaré responder tan pronto como me sea posible.</p>
             <form onSubmit={handleSubmit}>

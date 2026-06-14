@@ -1,4 +1,40 @@
+/* ----------contactaCta-------- */
+
+/*contenedor principañ*/
 .contacta-cta {
-    background-color: aqua;
-    border:1px solid black;
+  padding: var(--espac-2xl) var(--espac-2xl);
+  background-color: var(--violeta);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--espac-l);
+  text-align: center;
 }
+
+/*titulo*/
+.contacta-cta h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-xl);
+  font-weight: var(--semibold);
+  color: var(--arena);
+  opacity: 0.90;
+}
+
+/*div del parrafo*/
+.contacta-cta > div p {
+  font-size: var(--parrafo-m);
+  color: var(--cielo);
+  opacity: 0.75;
+  line-height: 1.8;
+  max-width: 500px;
+  margin: 0 auto 10px;
+}
+
+/*contenedor botones*/
+.index-hero-container-button{
+  display: flex;
+  gap: var(--espac-s);
+  flex-wrap: wrap;
+  margin-top: var(--espac-s);
+}
+

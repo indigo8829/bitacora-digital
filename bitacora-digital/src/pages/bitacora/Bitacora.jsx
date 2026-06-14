@@ -43,8 +43,8 @@ function Bitacora () {
     return (
         //Contenido principal de página.
         <main className="bitacora">
-            <h1>Bitacora</h1>
             <section>
+                <h1>Bitacora</h1>
                 {/*Rederizado condicional si tenemos :id o no - mostramos lista de publicaciones y 
                 publicación en detalle (outlet) o categorias, listado, y post*/}
                 {esPostDetalle ? 

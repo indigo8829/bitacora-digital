@@ -1,10 +1,28 @@
+/*------------ Header------------- */
+
+/*contenedor principal*/
 .header-container {
-    max-height: none;
-    background-color: #c77e46;
-    display: flex;
-    flex-direction: row;
-    border: 2px solid #00000000;
-    border-radius: 6px;
-    justify-content: space-around ;
-    align-items: center;
+  background-color: var(--oscuro);
+  border-bottom: 2px solid var(--ocre);
+  padding: 14px 48px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
+
+/*contenedor de la imagen*/
+.contenedor-img {
+  display: flex;
+  align-items: center;
+}
+
+.contenedor-img img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+

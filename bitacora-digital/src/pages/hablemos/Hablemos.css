@@ -1,0 +1,131 @@
+/*--------------- Hablemos ------------------*/
+/*contenedor del main*/
+.hablemos {
+  min-height: 100%;
+  background-color: var(--pergamino);
+  display: flex;
+  flex-direction: column;
+}
+
+/* 1º seccion articulo */
+.hablemos > section:first-child {
+  background-color: var(--violeta);
+}
+
+/* segunda seccion lista de temas */
+.hablemos > section:nth-child(2) {
+  background-color: var(--arena);
+  border-bottom: 1px solid var(--ocre);
+  padding: var(--espac-xl) var(--espac-2xl);
+}
+
+/*titulo*/
+.hablemos > section:nth-child(2) article h2 {
+  font-family: var(--font-parrafos);
+  font-size: var(--28px);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  margin-bottom: var(--espac-l);
+}
+
+.hablemos > section:nth-child(2) article ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px 30px;
+}
+
+/*lista desordenada */
+.hablemos > section:nth-child(2) article ul li {
+  font-size: var(--parrafo-m);
+  color: var(--corteza);
+  padding: 8px 0 8px 16px;
+  position: relative;
+  border-bottom: 2px solid var(--pergamino);
+  line-height: 1.5;
+}
+
+.hablemos > section:nth-child(2) article ul li::before {
+  content: '*';
+  position: absolute;
+  left: 0;
+  color: var(--violeta);
+  font-size: var(--parrafo-xs);
+}
+
+/*------------contenedor seccion "Construir en compañía"----- */
+.hablemos > section:nth-child(3) {
+  background-color: var(--pergamino);
+  border-bottom: 1px solid var(--ocre);
+  border-left: 4px solid var(--violeta);
+}
+
+/*contenedor del articlecard*/
+.hablemos > section:nth-child(3) .article-card {
+  padding-left: var(--espac-xl);
+}
+
+/*-------------ContactForm----------------------- */
+.hablemos > section:nth-child(4),
+.hablemos > section:has(form) {
+  background-color: var(--arena);
+}
+
+/*------------secccion otras formas de conectar ------*/
+.hablemos > section:nth-child(5) {
+  background-color: var(--oscuro);
+  padding: var(--espac-2xl) var(--espac-2xl);
+}
+
+.hablemos > section:nth-child(5) div h2 {
+  font-family: var(--font-parrafos);
+  font-size: var(--titulo-s);
+  font-weight: var(--semibold);
+  color: var(--pergamino);
+  margin-bottom: var(--espac-m);
+}
+
+.hablemos > section:nth-child(5) div > p {
+  font-size: var(--parrafo-m);
+  color: var(--ocre);
+  margin-bottom: var(--espac-l);
+}
+
+.hablemos > section:nth-child(5) ul {
+  list-style: none;
+  display: flex;
+  gap: 16px;
+}
+
+.hablemos > section:nth-child(5) ul li a {
+  font-size: var(--parrafo-m);
+  font-weight: var(--medium);
+  color: var(--pergamino);
+  letter-spacing: 1px ;
+  padding: var(--espac-s) var(--espac-m);
+  border: 1px solid var(--ocre);
+  border-radius: var(--radio-s);
+  transition: background-color 1s;
+  display: inline-block;
+}
+
+.hablemos > section:nth-child(5) ul li a:hover {
+  background-color: var(--arena);
+  color: var(--corteza);
+}
+
+/* ultima seccion "Gracias por llegar" */
+.hablemos > section:last-child {
+  background-color: var(--violeta);
+}
+
+.hablemos > section:last-child .article-card h2 {
+  color: var(--pergamino);
+}
+
+.hablemos > section:last-child .article-card p {
+  color: var(--niebla);
+  opacity: 0.88;
+}
+
+

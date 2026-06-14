@@ -1,11 +1,10 @@
 /*-------BARRA DE NAVEGACIÓN SECUNDARIA--------*/
-
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import CustomButton from "../components/CustomButton";
 
 function Footer () {
     return (
-        <>
         <footer className="footer-container">
             <div className="navegacion-secundaria">
                 <div className="texto">
@@ -29,14 +28,17 @@ function Footer () {
                 <div className="texto">
                     <h3>¿Te apetece conversar?</h3>
                     <p>Si algo de lo que has leído te ha resultado útil, interesante o te ha hecho reflexionar, estaré encantada de conversar.</p><p>Gracias por pasar por aquí.</p>
+                    <CustomButton
+                        destino="/hablemos"
+                        texto="Hablemos"
+                    />
                 </div>
             </div>
             <div className="copyright">
                 <p>© 2026 Estefanía Molina Giménez | Bitácora Digital</p>
             </div>
         </footer>
-        </>
     ) 
 }
 
-export default Footer; 
+export default Footer 

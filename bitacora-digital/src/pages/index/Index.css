@@ -1,8 +1,43 @@
+/*---------------INICIO-------------*/
+
 .index {
-    
+  width: 100%;
 }
 
+/* Seccion A: Indexhero + aboutbitacora */
 .index-a {
-    display: flex;
-    flex-direction: row-reverse;
+  display: grid;
+  grid-template-columns: 1fr 340px;
+  gap: 0;
+  background-color: var(--violeta);
+  min-height: 480px;
 }
+
+.index-a > div {
+  padding: var(--espac-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/*aside zona de presentacion personal*/
+.index-a > aside {
+  background-color: rgba(0, 0, 0, 0.15);
+  padding: var(--espac-2xl) var(--espac-xl);
+  border-left: 1px solid var(--pizarra);
+}
+
+/* resto de secciones con diferentes fondos */
+.index > section:nth-child(2) {
+  background-color: var(--pergamino);
+}
+
+.index > section:nth-child(3) {
+  background-color: var(--corteza);
+}
+
+.index > section:nth-child(4) {
+  background-color: var(--violeta);
+}
+
+

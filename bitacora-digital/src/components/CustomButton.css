@@ -1,12 +1,63 @@
+/*---------CustomButton---------------*/
+   
+/*este es el botón que reutilizo en varios componentes, 
+voy a crear un par de versiones para reutilizar con el className por props*/
+
+/*el boton*/
 .custom-button {
-    display:block;
-    text-decoration: none;
-    text-align: center;
-    border:none;
-    border-radius: 5px;
-    background-color: red;
-    color:#ffff;
-    padding: 6px 12px;
-    width: fit-content;
-    margin: 0 auto;
+  width: fit-content;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-s);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  padding: var(--espac-s) var(--espac-l);
+  border-radius: var(--radio-m);
+  border: 1px solid transparent;
+  cursor: pointer;
+  line-height: 1;    
+}
+
+/* boton con color principal  */
+.custom-button {
+  background-color: var(--violeta);
+  color: var(--niebla);
+  border-color: var(--violeta);
+}
+
+.custom-button:hover {
+  background-color: #443a62;
+  border-color: #443a62;
+  transform: translateY(-3px);
+}
+
+.custom-button:active {
+  transform: translateY(0);
+}
+
+/************** boton con color secundario claro ************/
+.personalizado-boton-claro {
+  background-color: transparent;
+  color: var(--pergamino);
+  border-color: var(--arena);
+}
+
+.personalizado-boton-claro:hover {
+  background-color:var(--pizarra);
+}
+
+
+/********** boton con color secundario oscuro ***********/
+.personalizado-boton-oscuro {
+  background-color: transparent;
+  color: var(--corteza);
+  border-color: var(--ocre);
+}
+
+.personalizado-boton-oscuro:hover {
+  background-color: var(--cielo);
+  opacity: 0.6;
+  color: var(--pizarra);
 }

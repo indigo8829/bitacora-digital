@@ -1,24 +1,42 @@
+/*------------NavBar------------ */
+
+/*contenedor principal*/
 .navegacion-principal {
-    width: 80% auto;
-    display: flex; 
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    background-color: #d89727;
-    border-radius: 5px;
-    border: 1px solid #fff188;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
+/* enlaces */
 .navegacion-principal a {
-    background-color: #aa7834e9;
-    color: #ffff;
-    padding: 10px 15px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-s);
+  font-weight: var(--regular);
+  letter-spacing: 1px;
+  color: var(--pergamino);
+  padding: var(--espac-s) var(--espac-m);
+  border-radius: var(--radio-s);
+  border: 1px solid transparent;
+  box-shadow: 2px 2px var(--oscuro-borde);  
 }
 
 .navegacion-principal a:hover {
-    background-color: #7e540b;
+  border-color: var(--niebla);
+  background-color: var(--niebla);
+  color: var(--oscuro-borde);
+  transform: translateY(-3px);
 }
+
+/* link Acceder lo diferenciamos visualmente */
+.navegacion-principal a:last-child {
+  color: var(--cielo);
+  border-color: var(--niebla);
+  margin-left: 12px;
+}
+
+.navegacion-principal a:last-child:hover {
+  background-color: var(--violeta);
+  color: var(--blanco);
+  transform: translateY(-3px);
+}
+

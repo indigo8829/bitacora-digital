@@ -1,14 +1,44 @@
-.listado-proyectos {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background-color: bisque;
-    gap: 15px; 
+/* ----------------Proyectos--------------- */
+
+.proyectos, .proyectos:has(.listado-proyectos) {
+  background-color: var(--pizarra);
+  min-height: 100%;
 }
 
+/*titulo pagina*/
+.proyectos > h1 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-xl);
+  font-weight: var(--semibold);
+  color: var(--pergamino);
+  padding: var(--espac-xl) var(--espac-2xl) var(--espac-m);
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--pizarra);
+  padding-bottom: var(--espac-l);
+}
+
+/*comun a todas las secciones */
+.proyectos> section {
+  padding: var(--espac-xl) var(--espac-2xl);
+}
+
+/* primera seccion */
+.proyectos > section:first-of-type {
+  background-color: var(--arena);
+  border-bottom: 1px solid var(--ocre);
+}
+
+/* segunda seccion con foto */
 .proyectos-noticias {
-    margin: 20px auto;
-    max-width: 1200px;
-    border: 1px solid black;
-    padding: 15px 20px;
+  background-color: var(--arena);
+  border-bottom: 1px solid var(--ocre);
+}
+
+/* seccion del listado de proyectos */
+.listado-proyectos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  background-color: var(--pizarra);
+  padding: var(--espac-2xl) var(--espac-2xl) var(--espac-2xl);
 }

@@ -1,5 +1,58 @@
+/* --------------TopicCard -------------*/
+/*contenedor principal */
 .topic-card {
-    display: flex;
-    flex-direction: column;
-    max-width: 200px;
+  background-color: var(--blanco);
+  border: 1px solid var(--arena);
+  border-radius: var(--radio-l);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 2s, transform 2s ;
+}
+
+.topic-card:hover {
+  box-shadow: 0 4px 20px var(--niebla);
+  transform: translateY(-3px);
+}
+
+/*caja de la imagen primer hijo*/
+.topic-card > div:first-child {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+
+/*imagen*/
+.topic-card > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1s;
+}
+
+.topic-card:hover > div:first-child img {
+  transform: scale(1.0);
+}
+
+/* caja del texto h y p*/
+.topic-card > div:last-child {
+  padding: var(--espac-m);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.topic-card h2 {
+  font-family: var(--font-parrafos);
+  font-size: var(--parrafo-xl);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+}
+
+.topic-card p {
+  font-size: var(--parrafo-s);
+  color: var(--ocre);
+  line-height: 1.6;
 }

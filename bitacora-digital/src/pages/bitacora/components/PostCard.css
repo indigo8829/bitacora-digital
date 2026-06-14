@@ -1,23 +1,92 @@
+/* -----------------PostCard------------- */
+
+/*contenedor principal*/
 .post-card {
-    display: flex;
-    flex-direction: column;
-    margin: 30px;
-    padding: 20px;
-    border: 1px solid #000000 ;
-    border-radius: 8px;
-    background-color: #f5e7dd; 
-    max-width: 300px;
+  background-color: var(--pergamino);
+  border: 1px solid var(--pizarra);
+  border-radius: var(--radio-l);
+  overflow: hidden;
 }
 
-.post-card div:first-child {
-    border: 1px solid #000000 ;
+.post-card:hover {
+  box-shadow: 0 6px 24px var(--corteza);
+  transform: translateY(-3px);
 }
 
-.post-card div:nth-child(2){
-    border: 1px solid #000000 ;
-
+/*enlace de la postcard*/
+.post-card > a {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
 }
 
-.post-card img {
-    height: 250px;
+/* contenedor img */
+.post-card > a > div:first-child {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/*img*/
+.post-card > a > div:first-child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1s;
+}
+
+.post-card:hover > a > div:first-child img {
+  transform: translateX(-3px);
+}
+
+/* contenido */
+.post-card > a > div:last-child {
+  padding: var(--espac-m);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  flex: 1;
+}
+
+.post-card h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-s);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  line-height: 1.20;
+}
+
+/* Categoría */
+.post-card h3 {
+  font-family: var(--font-titulos);
+  font-size: var(--parrafo-s);
+  font-weight: var(--medium);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--oscuro);
+}
+
+/* la fecha */
+.post-card h4 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-s);
+  font-weight: var(--regular);
+  color: var(--corteza);
+  opacity: 0.90;
+}
+
+/* el texto */
+.post-card p {
+  font-size: var(--parrafo-m);
+  color: var(--corteza);
+  line-height: 1.65;
+  margin-top: var(--espac-xs);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }

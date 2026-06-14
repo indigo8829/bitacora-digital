@@ -1,10 +1,30 @@
+/* -----------------PostList------------------ */
+
+/*contenedor principal*/
 .post-list {
-    display: flex;
-    flex-direction: column;
-    gap:10px;
-    margin: 30px;
-    padding: 20px;
-    border: 1px solid #000000 ;
-    border-radius: 8px;
-    background-color: #f5e7dd;
+  background-color: var(--arena);
+  border: 1px solid var(--ocre);
+  border-radius: var(--radio-l);
+  padding: 20px;
+  position: sticky;
+  top: 80px; /* altura del header sticky */
+}
+
+/*titulo*/
+.post-list h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-s);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  margin-bottom: var(--espac-m);
+  padding-bottom: var(--espac-s);
+  border-bottom: 1px solid var(--ocre);
+}
+
+/*lista desordenada*/
+.post-list ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }

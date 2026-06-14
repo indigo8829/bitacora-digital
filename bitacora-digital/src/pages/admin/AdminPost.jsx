@@ -4,7 +4,7 @@ import postPost from "../../services/postPost";
 import getCategories from "../../services/getCategories";
 import deletePost from "../../services/deletePost";
 import putPost from "../../services/putPost";
-
+import "./AdminPost.css"
 
 function AdminPost () {
     //=====================PASO 1. (METODO GET "LECTURA")====================
@@ -153,134 +153,147 @@ function AdminPost () {
 
 
     return (
-        <main>
+        <main className="admin-post">
             <h1>Administración de publicaciones</h1>
-            <section>
-                <h2>Lista de publicaciones:</h2>
-                <div>
-                    {posts.map((Obpost, i) => {  //cambiar la variable a recorrer (3. METODO GET LECTURA API)
-                        return ( 
-                            <div  key={Obpost.id}>
-                                <h3>{Obpost.titulo}</h3>
-                                {/*añadimos para cada post la posibilidad de modificar o eliminar
-                                que reciben como parametros el post o la id*/}
-                                <button onClick={() => modificarPost (Obpost)}>Editar Publicación</button>
-                                <button onClick={() => eliminarPost (Obpost.id)}>Eliminar Publicación</button>
-                           </div>
-                        )
-                    })}
-                </div>
-            </section>
-            <section>
-                <h2>Formulario para crear nueva publicación</h2>
-                <form onSubmit={handleSubmit}>
+            <div className="section-contenedor">
+                <section className="lista-publicaciones">
+                    <h2>Lista de publicaciones</h2>
                     <div>
-                        <label htmlFor="titulo">Titulo:</label>
-                        <input 
-                            id="titulo"
-                            name="titulo"
-                            type="text"
-                            value={inputs.titulo}
-                            onChange={handleChange}
-                        />
-                        {errors.titulo && (
-                        <p className="error">{errors.titulo}</p>)}
-                                              
-                        <label htmlFor="categoria">Categoria:</label>
-                        <select 
-                            name="categoria"
-                            value={inputs.categoria}
-                            onChange={handleChange}
-                        >
-                            <option value="">Selecciona una categoría</option>
-                            {/*Hago un filter para eliminar la 1º categoria de las publicaciones y recorro la nueva array para mostrar las categorias restantes */}
-                            {/*Obtengo las categorias disponbibles de la mockApi haciendo un GET (arriba) y aqui un map para recorrer la array de datos devuelta por la api (state)*/}
-                            {categorias
-                                .filter((categoria) => categoria.id !== 1)
-                                .map((categoria, i) => {
-                                    return ( 
-                                        <option
-                                            key={categoria.id}
-                                            value={categoria.id}
-                                        >{categoria.nombre}
-                                        </option>
-                                    )
-                                })
-                            }
-                        </select>
-                        {/*Si hay error mostrara p sino no = errors.categoria ? <p>{errors.categoria}</p> : null */}
-                        {errors.categoria && (
-                        <p className="error">{errors.categoria}</p>)}
-
-                        <label htmlFor="categoriaId">CategoriaId:</label> 
-                        <select 
-                            name="categoriaId"                                        
-                            value={inputs.categoriaId}                
-                            onChange={handleChange}
-                        >
-                            <option value="">Selecciona una categoría</option>
-                            {categorias
-                                .filter((categoria) => categoria.id !== 1)
-                                .map((categoria, i) => {
-                                    return ( 
-                                        <option
-                                            key={categoria.id}
-                                            value={categoria.id}
-                                        >{categoria.id}
-                                        </option>
-                                    )
-                                })
-                            }
-                        </select>
-                        {errors.categoriaId && (
-                        <p className="error">{errors.categoriaId}</p>)}
-
-                        <label htmlFor="fecha">Fecha:</label>
-                        <input 
-                            id="fecha"
-                            name="fecha"
-                            type="date"
-                            value={inputs.fecha}
-                            onChange={handleChange}
-                        />
-                        {errors.fecha && (
-                        <p className="error">{errors.fecha}</p>)}
-
-                        <label htmlFor="imagen">Imagen:</label>
-                        <input 
-                            id="imagen"
-                            name="imagen"
-                            type="text"
-                            value={inputs.imagen}
-                            onChange={handleChange}
-                        />
-
-                        <label htmlFor="resumen">Resumen:</label>
-                        <textarea
-                            id="resumen"
-                            name="resumen"
-                            value={inputs.resumen}
-                            onChange={handleChange}
-                        />
-                        {errors.resumen && (
-                        <p className="error">{errors.resumen}</p>)}
-
-                        <label htmlFor="detalle">Detalle:</label>
-                        <textarea
-                            id="detalle"
-                            name="detalle"
-                            value={inputs.detalle}
-                            onChange={handleChange}
-                        />
-                        {errors.detalle && (
-                        <p className="error">{errors.detalle}</p>)}
+                        {posts.map((Obpost, i) => {  //cambiar la variable a recorrer (3. METODO GET LECTURA API)
+                            return ( 
+                                <article className="articulo-post"  key={Obpost.id}>
+                                    <div>
+                                        <h3>{Obpost.titulo}</h3>
+                                        <div className="texto-categorias">
+                                            <p>{Obpost.categoria}</p>
+                                            <p>{Obpost.categoriaId}</p>
+                                        </div>
+                                        <p>{Obpost.fecha}</p>
+                                        <p>{Obpost.resumen}</p>
+                                        <p>{Obpost.detalle}</p>
+                                    </div>
+                                    {/*añadimos para cada post la posibilidad de modificar o eliminar
+                                    que reciben como parametros el post o la id*/}
+                                    <div>
+                                        <button onClick={() => modificarPost (Obpost)}>Editar Publicación</button>
+                                        <button onClick={() => eliminarPost (Obpost.id)}>Eliminar Publicación</button>
+                                    </div>
+                            </article>
+                            )
+                        })}
                     </div>
-                    <div>
-                        <button type="submit">{modoModificando ? "Guardar Cambios" : "Crear Publicación"}</button> 
-                        <button type="button" onClick={handleReset}>Borrar Formulario</button>
-                    </div>
-                </form>
-            </section>
+                </section>
+                <section className="form-container">
+                    <h2>Crea una publicación</h2>
+                    <form onSubmit={handleSubmit}>
+                        <div>
+                            <label htmlFor="titulo">Titulo:</label>
+                            <input 
+                                id="titulo"
+                                name="titulo"
+                                type="text"
+                                value={inputs.titulo}
+                                onChange={handleChange}
+                            />
+                            {errors.titulo && (
+                            <p className="error">{errors.titulo}</p>)}
+                                                
+                            <label htmlFor="categoria">Categoria:</label>
+                            <select 
+                                name="categoria"
+                                value={inputs.categoria}
+                                onChange={handleChange}
+                            >
+                                <option value="">Selecciona una categoría</option>
+                                {/*Hago un filter para eliminar la 1º categoria de las publicaciones y recorro la nueva array para mostrar las categorias restantes */}
+                                {/*Obtengo las categorias disponbibles de la mockApi haciendo un GET (arriba) y aqui un map para recorrer la array de datos devuelta por la api (state)*/}
+                                {categorias
+                                    .filter((categoria) => categoria.id !== 1)
+                                    .map((categoria, i) => {
+                                        return ( 
+                                            <option
+                                                key={categoria.id}
+                                                value={categoria.id}
+                                            >{categoria.nombre}
+                                            </option>
+                                        )
+                                    })
+                                }
+                            </select>
+                            {/*Si hay error mostrara p sino no = errors.categoria ? <p>{errors.categoria}</p> : null */}
+                            {errors.categoria && (
+                            <p className="error">{errors.categoria}</p>)}
+
+                            <label htmlFor="categoriaId">CategoriaId:</label> 
+                            <select 
+                                name="categoriaId"                                        
+                                value={inputs.categoriaId}                
+                                onChange={handleChange}
+                            >
+                                <option value="">Selecciona una categoría</option>
+                                {categorias
+                                    .filter((categoria) => categoria.id !== 1)
+                                    .map((categoria, i) => {
+                                        return ( 
+                                            <option
+                                                key={categoria.id}
+                                                value={categoria.id}
+                                            >{categoria.id}
+                                            </option>
+                                        )
+                                    })
+                                }
+                            </select>
+                            {errors.categoriaId && (
+                            <p className="error">{errors.categoriaId}</p>)}
+
+                            <label htmlFor="fecha">Fecha:</label>
+                            <input 
+                                id="fecha"
+                                name="fecha"
+                                type="date"
+                                value={inputs.fecha}
+                                onChange={handleChange}
+                            />
+                            {errors.fecha && (
+                            <p className="error">{errors.fecha}</p>)}
+
+                            <label htmlFor="imagen">Imagen:</label>
+                            <input 
+                                id="imagen"
+                                name="imagen"
+                                type="text"
+                                value={inputs.imagen}
+                                onChange={handleChange}
+                            />
+
+                            <label htmlFor="resumen">Resumen:</label>
+                            <textarea
+                                id="resumen"
+                                name="resumen"
+                                value={inputs.resumen}
+                                onChange={handleChange}
+                            />
+                            {errors.resumen && (
+                            <p className="error">{errors.resumen}</p>)}
+
+                            <label htmlFor="detalle">Detalle:</label>
+                            <textarea
+                                id="detalle"
+                                name="detalle"
+                                value={inputs.detalle}
+                                onChange={handleChange}
+                            />
+                            {errors.detalle && (
+                            <p className="error">{errors.detalle}</p>)}
+                        </div>
+                        <div>
+                            <button type="submit">{modoModificando ? "Guardar Cambios" : "Crear Publicación"}</button> 
+                            <button type="button" onClick={handleReset}>Borrar Formulario</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
         </main>
     )
 }

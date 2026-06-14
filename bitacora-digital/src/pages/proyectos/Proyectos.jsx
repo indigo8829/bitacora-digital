@@ -4,9 +4,10 @@ import projectsData from "../../data/projectsData";
 import "./Proyectos.css"
 import ArticleCardImg from "../../components/ArticleCardImg";
 
+
 function Proyectos () {
     return (
-        <main>
+        <main className="proyectos">
             <h1>Proyectos</h1>
             <section>
                 <ArticleCard 
@@ -40,4 +41,4 @@ function Proyectos () {
     )
 }
 
-export default Proyectos;
+export default Proyectos

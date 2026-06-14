@@ -1,16 +1,31 @@
+/*---------TOPICSECTION------------*/
+
+/*contenedor principal*/
 .topics-section {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    margin: 0px auto;
-    border: 1px solid black;
+  padding: var(--espac-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--espac-xl);
 }
 
+/*titulo*/
+.topics-section h2 {
+  font-family: var(--font-titulos);
+  font-size: var(--titulo-l);
+  font-weight: var(--semibold);
+  color: var(--corteza);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/*contenedor de las categorias (cards)*/
 .contenedor-topic-cards {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-items: center;
-    gap: 60px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+}
+
+.index-hero-container-button{
+  margin: 0 auto;
 }
 
