@@ -6,7 +6,7 @@
   padding: var(--espac-xl) var(--espac-2xl) var(--espac-2xl);
 }
 
-/*titulo de la pagina*/
+/*titulo de la pagina */
 .admin-post > h1 {
   font-family: var(--font-titulos);
   font-size: var(--titulo-l);
