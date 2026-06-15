@@ -11,7 +11,7 @@ import getPost from "../../services/getPost";
 
 function Bitacora () {
     //Declaro una variable useState para almacenar la categoria seleccionada.
-    const [categoriaSelect, setCategoriaSelect] = useState (null);
+    const [categoriaSelect, setCategoriaSelect] = useState ("1");
     
     //rescatamos la id de la ruta dinamica con el objeto useParam. 
     const {idPost} = useParams();
@@ -63,7 +63,7 @@ function Bitacora () {
                             {/*Renderizado condicional de la categoria seleccionada (operador ternario)- 
                             para mostrar todas las publicaciones id es 1, el resto hay que usar el filtro para comparar
                             las propiedades del objeto leido con el objeto seleccionado. */}          
-                            {categoriaSelect === 1 ? 
+                            {String(categoriaSelect) === "1" ? 
                                 postApi.map((ObjetoPost, i) => {  //cambiar la variable a recorrer (3. METODO GET LECTURA API)
                                     return (
                                         <PostCard
@@ -73,7 +73,7 @@ function Bitacora () {
                                     )
                             })
                             : postApi            //cambiar la variable a recorrer (3. METODO GET LECTURA API)
-                                .filter((post) => post.categoriaId === categoriaSelect)
+                                .filter((post) => post.categoriaId === String(categoriaSelect))
                                 .map((ObjetoPost, i) => {
                                     return (
                                         <PostCard 

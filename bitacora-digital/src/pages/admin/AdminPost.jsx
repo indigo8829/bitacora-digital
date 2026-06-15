@@ -86,7 +86,7 @@ function AdminPost () {
                 .then(postModificado => {    //le pasamos la info del postmodificado
                     setPosts(prev =>         //actualizamos variable pasando valor previo 
                         prev.map(post => 
-                            String(post.id) === String(postModificado.id) //recorremos la variable que almacena los post previos 
+                            (post.id) === (postModificado.id) //recorremos la variable que almacena los post previos 
                             ? postModificado                          //Verdadero , un post con la misma id que el postModificado, sustituye
                             : post                                    //falso , dejalo igual              
                         )                                                     
