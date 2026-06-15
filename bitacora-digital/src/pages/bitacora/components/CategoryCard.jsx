@@ -11,7 +11,7 @@ function CategoryCard ({categoria, clickCategoryCallBack}) {
         onClick={() => {clickCategoryCallBack(categoria.id)}}
         >
             <div>
-                <img src={categoria.imagen} alt={categoria.nombre} />
+                <img src={categoria.icon} alt={categoria.nombre} />
             </div>
             <div>
                 <h2>{categoria.nombre}</h2>

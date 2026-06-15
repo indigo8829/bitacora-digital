@@ -22,7 +22,7 @@ function Proyectos () {
                 articulo= {{
                     titulo: "Sección en evolución",
                     contenido: "Actualmente esta página muestra una selección resumida de proyectos.Próximamente podrás explorar cada proyecto en profundidad, consultar documentación, conocer el proceso de desarrollo y descubrir los aprendizajes obtenidos en cada iniciativa.",
-                    img:""
+                    img:"https://res.cloudinary.com/dkldz1egh/image/upload/v1781490111/construccion_yblzpd.png"
                 }}
                 />
 

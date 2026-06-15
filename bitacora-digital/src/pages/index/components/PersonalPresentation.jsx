@@ -1,11 +1,12 @@
 import CustomButton from "../../../components/CustomButton.jsx";
 import "./PersonalPresentation.css";
+import fotoperfil from "../../../assets/images/estefania.jpg"
 
 function PersonalPresentation () {
     return (
         <article className="personal-presentation">
             <div>
-                <img src="https://picsum.photos/150" alt="" />
+                <img src={fotoperfil} alt="Estefanía Molina" />
             </div>
             <div>
                 <h3>Sobre mí</h3>

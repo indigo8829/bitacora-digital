@@ -86,7 +86,7 @@ function AdminPost () {
                 .then(postModificado => {    //le pasamos la info del postmodificado
                     setPosts(prev =>         //actualizamos variable pasando valor previo 
                         prev.map(post => 
-                            post.id === postModificado.id //recorremos la variable que almacena los post previos 
+                            String(post.id) === String(postModificado.id) //recorremos la variable que almacena los post previos 
                             ? postModificado                          //Verdadero , un post con la misma id que el postModificado, sustituye
                             : post                                    //falso , dejalo igual              
                         )                                                     
@@ -213,7 +213,7 @@ function AdminPost () {
                                         return ( 
                                             <option
                                                 key={categoria.id}
-                                                value={categoria.id}
+                                                value={categoria.categoria}
                                             >{categoria.nombre}
                                             </option>
                                         )

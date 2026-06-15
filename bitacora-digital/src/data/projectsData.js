@@ -9,7 +9,7 @@ const projectsData = [
     etiquetas: ["turismo rural", "innovación social", "territorio", "emprendimiento"],
     estado: "En desarrollo",
     destacado: true,
-    imagen:"https://picsum.photos/300/200",
+    imagen:"https://res.cloudinary.com/dkldz1egh/image/upload/v1781491000/magnific__img1-img2-img3-img4-editorial-digital-collage-repr__33345_xrqrzt.png",
   },
   {
     id: 2,
@@ -19,7 +19,7 @@ const projectsData = [
     etiquetas: ["react", "desarrollo web", "aprendizaje", "documentación"],
     estado: "En desarrollo",
     destacado: true,
-    imagen:"https://picsum.photos/300/200",
+    imagen:"https://res.cloudinary.com/dkldz1egh/image/upload/v1781490726/mapa-brujula_wwsmjo.png",
   },
 
   {
@@ -30,7 +30,7 @@ const projectsData = [
     etiquetas: ["liderazgo", "innovación territorial", "reto demográfico", "medio rural"],
     estado: "Finalizado",
     destacado: true,
-    imagen:"https://picsum.photos/300/200",
+    imagen:"https://res.cloudinary.com/dkldz1egh/image/upload/v1781490435/Bifurcaci%C3%B3n_jp5q1n.png",
   },
 
   {
@@ -41,7 +41,7 @@ const projectsData = [
     etiquetas: ["html", "css", "frontend", "trabajo en equipo"],
     estado: "Finalizado",
     destacado: true,
-    imagen:"https://picsum.photos/300/200",
+    imagen:"https://github.com/user-attachments/assets/0f01a587-a699-4464-b26d-1ff0af73bd6f",
   },
 
   {
@@ -52,7 +52,7 @@ const projectsData = [
     etiquetas: ["emprendimiento", "alimentación artesanal", "autoempleo", "gestión"],
     estado: "Finalizado",
     destacado: false,
-    imagen:"https://picsum.photos/300/200",
+    imagen:"https://res.cloudinary.com/dkldz1egh/image/upload/v1781490214/1781486196167_kf5ctx.webp",
   },
 
   {
@@ -63,7 +63,7 @@ const projectsData = [
     etiquetas: ["turismo rural", "gestión", "territorio", "aprendizaje"],
     estado: "Finalizado",
     destacado: false,
-    imagen:"https://picsum.photos/300/200",
+    imagen:"https://res.cloudinary.com/dkldz1egh/image/upload/v1781491449/2023-07_Qui%C3%B1ones3_bksnqs.jpg",
   },
 
   {
@@ -74,7 +74,7 @@ const projectsData = [
     etiquetas: ["diseño", "interiorismo", "creatividad", "proyectos"],
     estado: "Finalizado",
     destacado: false,
-    imagen:"https://picsum.photos/300/200",
+    imagen:"https://res.cloudinary.com/dkldz1egh/image/upload/v1781491307/planos_h4cnpf.jpg",
   },
 ]
 

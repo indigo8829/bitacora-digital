@@ -22,7 +22,7 @@ function PostDetail () {
                 <h4>{postSelecc.fecha}</h4>
             </div>
             <div>
-                <img src={postSelecc.imagen} alt="" />
+                <img src={postSelecc.imagen} alt={postSelecc.titulo} />
             </div>
             <div>
                 <h2>{postSelecc.titulo}</h2>
